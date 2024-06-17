@@ -1,0 +1,68 @@
+<script>
+
+
+
+	// Function to generate and download .ics file
+	function downloadICS(title, startDate, endDate, description, location) {
+		// Constructing the .ics content
+		var icsContent = "BEGIN:VCALENDAR\n" +
+						 "VERSION:2.0\n" +
+						 "BEGIN:VEVENT\n" +
+						 "SUMMARY:" + title + "\n" +
+						 "DTSTART:" + formatDate(startDate) + "\n" +
+						 "DTEND:" + formatDate(endDate) + "\n" +
+						 "LOCATION:" + location + "\n" +
+						 "DESCRIPTION:" + description + "\n" +
+						 "END:VEVENT\n" +
+						 "END:VCALENDAR";
+		
+		// Encoding for the .ics file
+		var icsBlob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+		var filename = 'event.ics';
+		
+		// Create a link element to trigger the download
+		var link = document.createElement('a');
+		link.href = window.URL.createObjectURL(icsBlob);
+		link.setAttribute('download', filename);
+		
+		// Append the link to the body and click it
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+	}
+	
+	// Helper function to format dates in the required format for .ics (YYYYMMDDTHHmmssZ)
+	function formatDate(date) {
+		return date.replace(/-/g, '') + 'T000000Z';
+	}
+	
+	
+	
+	
+	
+	</script>
+	
+	
+	<div class="calendar-wrap">
+		<div class="mini-calendar" data-calendar="" style="display:none"></div>
+		<div class="mini-events-list" data-list-length="4" data-calendar="" style="display:none">
+			{{?it.length}}
+				{{~it :event:index}}
+				<div class="event" data-index="{{=event.i}}" data-click-event>
+					<time>
+						<span class="event-month">{{=event.start.month.short}}</span>
+						<span class="event-day">{{=event.start.day.numPadded}}</span>
+					</time>
+					<div class="event-data">
+						<div class="event-title">{{=event.title}}</div>
+						<button onclick="event.stopPropagation(); downloadICS('{{=event.title}}', '{{=event.start.date}}', '{{=event.end.date}}', '{{=event.description}}', '{{=event.location}}')">Download</button>
+	
+					
+					</div>
+				</div>
+				{{~}}
+			{{?}}
+		</div>
+	</div>
+	
+	
