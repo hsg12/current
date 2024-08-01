@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>City of Clovis</title>
+	<meta name="description" content="">
+	<meta name="robots" content="index, follow">
+
+	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+	<link rel="stylesheet" href="_assets_/fonts/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="_assets_/css/layout.css">
+
+	<link rel="shortcut icon" href="_assets_/images/favicon.ico">
+	<link rel="apple-touch-icon" href="_assets_/images/touch-icon.png">
+
+</head>
+<body id="freeform" class="">
+
+<header class="site-header">
+	<div id="header-in">
+		<div id="toggles" class="d-lg-none">
+			<div id="nav-toggle" class="fa fa-bars"></div>
+		</div><!--/#toggles-->
+		<div id="logo-wrap">
+			<a href="./" id="logo"><img src="_assets_/images/logo.png" alt="navigation logo"></a>
+		</div>
+		<nav>
+			<ul id="nav">
+				<li><a href="./">Home</a></li>
+				<li>
+					<a href="./">Government</a>
+					<ul>
+						<li>
+							<a href="./">Section Header</a>
+							<ul>
+								<li><a href="./">Page Link Title</a></li>
+								<li><span>Page Link Title</span></li>
+								<li><a href="./">Page Link Title</a></li>
+								<li><a href="./">Page Link Title</a></li>
+								<li><a href="./">Page Link Title</a></li>
+								<li><a href="./">Page Link Title</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="./">Section Header</a>
+							<ul>
+								<li><a href="./">Page Link Title</a></li>
+								<li><span>Page Link Title</span></li>
+							</ul>
+						</li>
+						<li>
+							<a href="./">Section Header</a>
+							<ul>
+								<li><a href="./">Page Link Title</a></li>
+								<li><span>Page Link Title</span></li>
+								<li><a href="./">Page Link Title</a></li>
+								<li><a href="./">Page Link Title</a></li>
+							</ul>
+						</li>
+						<li><a href="./">Section Header</a></li>
+						<li><a href="./">Section Header</a></li>
+						<li>
+							<a href="./">Section Header</a>
+							<ul>
+								<li><a href="./">Page Link Title</a></li>
+								<li><span>Page Link Title</span></li>
+								<li><a href="./">Page Link Title</a></li>
+								<li><a href="./">Page Link Title</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="./">Section Header</a>
+							<ul>
+								<li><a href="./">Page Link Title</a></li>
+								<li><span>Page Link Title</span></li>
+								<li><a href="./">Page Link Title</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="./">Section Header</a>
+							<ul>
+								<li><a href="./">Page Link Title</a></li>
+								<li><span>Page Link Title</span></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="./">Residents</a></li>
+				<li><a href="./">Businesses</a></li>
+				<li><a href="./">Visitors</a></li>
+				<li><a href="./">How Do I...</a></li>
+			</ul>
+		</nav>
+		<div id="header-right-box">
+			<div id="google-translate" class="hidden">
+				<script>
+					function googleTranslateElementInit() {
+						new google.translate.TranslateElement({pagelanguage: 'en',
+							layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
+							'google-translate');
+					}
+				</script>
+			</div><!--/#google-translate-->
+			<ul id="translation-links">
+				<li>
+					<button type="button" id="translate-button" aria-label="translate website" aria-haspopup="true" aria-expanded="false">
+						<img src="_assets_/images/flags/English.png" class="translate-flag" alt="">
+					</button>
+					<button id="translate-reset" translate="no">Reset</button>
+					<ul class="clearfix" aria-labelledby="translate-button">
+						<li class="notranslate"><a href="#" class="English" data-lang="English">English</a></li>
+						<li><a href="#" class="Afrikaans" data-lang="Afrikaans">Afrikaans</a></li>
+						<li><a href="#" class="Albanian" data-lang="Albanian">Albanian</a></li>
+						<li><a href="#" class="Arabic" data-lang="Arabic">Arabic</a></li>
+						<li><a href="#" class="Armenian" data-lang="Armenian">Armenian</a></li>
+						<li><a href="#" class="Azerbaijani" data-lang="Azerbaijani">Azerbaijani</a></li>
+						<li><a href="#" class="Basque" data-lang="Basque">Basque</a></li>
+						<li><a href="#" class="Belarusian" data-lang="Belarusian">Belarusian</a></li>
+						<li><a href="#" class="Bengali" data-lang="Bengali">Bengali</a></li>
+						<li><a href="#" class="Bosnian" data-lang="Bosnian">Bosnian</a></li>
+						<li><a href="#" class="Bulgarian" data-lang="Bulgarian">Bulgarian</a></li>
+						<li><a href="#" class="Catalan" data-lang="Catalan">Catalan</a></li>
+						<li><a href="#" class="Cebuano" data-lang="Cebuano">Cebuano</a></li>
+						<li><a href="#" class="Chinese" data-lang="Chinese (Simplified)">Chinese (Simplified)</a></li>
+						<li><a href="#" class="Chinese" data-lang="Chinese (Traditional)">Chinese (Traditional)</a></li>
+						<li><a href="#" class="Croatian" data-lang="Croatian">Croatian</a></li>
+						<li><a href="#" class="Czech" data-lang="Czech">Czech</a></li>
+						<li><a href="#" class="Danish" data-lang="Danish">Danish</a></li>
+						<li><a href="#" class="Dutch" data-lang="Dutch">Dutch</a></li>
+						<li><a href="#" class="Esperanto" data-lang="Esperanto">Esperanto</a></li>
+						<li><a href="#" class="Estonian" data-lang="Estonian">Estonian</a></li>
+						<li><a href="#" class="Filipino" data-lang="Filipino">Filipino</a></li>
+						<li><a href="#" class="Finnish" data-lang="Finnish">Finnish</a></li>
+						<li><a href="#" class="French" data-lang="French">French</a></li>
+						<li><a href="#" class="Galician" data-lang="Galician">Galician</a></li>
+						<li><a href="#" class="Georgian" data-lang="Georgian">Georgian</a></li>
+						<li><a href="#" class="German" data-lang="German">German</a></li>
+						<li><a href="#" class="Greek" data-lang="Greek">Greek</a></li>
+						<li><a href="#" class="Gujarati" data-lang="Gujarati">Gujarati</a></li>
+						<li><a href="#" class="Haitian Creole" data-lang="Haitian Creole">Haitian Creole</a></li>
+						<li><a href="#" class="Hausa" data-lang="Hausa">Hausa</a></li>
+						<li><a href="#" class="Hebrew" data-lang="Hebrew">Hebrew</a></li>
+						<li><a href="#" class="Hindi" data-lang="Hindi">Hindi</a></li>
+						<li><a href="#" class="Hmong" data-lang="Hmong">Hmong</a></li>
+						<li><a href="#" class="Hungarian" data-lang="Hungarian">Hungarian</a></li>
+						<li><a href="#" class="Icelandic" data-lang="Icelandic">Icelandic</a></li>
+						<li><a href="#" class="Igbo" data-lang="Igbo">Igbo</a></li>
+						<li><a href="#" class="Indonesian" data-lang="Indonesian">Indonesian</a></li>
+						<li><a href="#" class="Irish" data-lang="Irish">Irish</a></li>
+						<li><a href="#" class="Italian" data-lang="Italian">Italian</a></li>
+						<li><a href="#" class="Japanese" data-lang="Japanese">Japanese</a></li>
+						<li><a href="#" class="Javanese" data-lang="Javanese">Javanese</a></li>
+						<li><a href="#" class="Kannada" data-lang="Kannada">Kannada</a></li>
+						<li><a href="#" class="Khmer" data-lang="Khmer">Khmer</a></li>
+						<li><a href="#" class="Korean" data-lang="Korean">Korean</a></li>
+						<li><a href="#" class="Lao" data-lang="Lao">Lao</a></li>
+						<li><a href="#" class="Latin" data-lang="Latin">Latin</a></li>
+						<li><a href="#" class="Latvian" data-lang="Latvian">Latvian</a></li>
+						<li><a href="#" class="Lithuanian" data-lang="Lithuanian">Lithuanian</a></li>
+						<li><a href="#" class="Macedonian" data-lang="Macedonian">Macedonian</a></li>
+						<li><a href="#" class="Malay" data-lang="Malay">Malay</a></li>
+						<li><a href="#" class="Maltese" data-lang="Maltese">Maltese</a></li>
+						<li><a href="#" class="Maori" data-lang="Maori">Maori</a></li>
+						<li><a href="#" class="Marathi" data-lang="Marathi">Marathi</a></li>
+						<li><a href="#" class="Mongolian" data-lang="Mongolian">Mongolian</a></li>
+						<li><a href="#" class="Nepali" data-lang="Nepali">Nepali</a></li>
+						<li><a href="#" class="Norwegian" data-lang="Norwegian">Norwegian</a></li>
+						<li><a href="#" class="Persian" data-lang="Persian">Persian</a></li>
+						<li><a href="#" class="Polish" data-lang="Polish">Polish</a></li>
+						<li><a href="#" class="Portuguese" data-lang="Portuguese">Portuguese</a></li>
+						<li><a href="#" class="Punjabi" data-lang="Punjabi">Punjabi</a></li>
+						<li><a href="#" class="Romanian" data-lang="Romanian">Romanian</a></li>
+						<li><a href="#" class="Russian" data-lang="Russian">Russian</a></li>
+						<li><a href="#" class="Serbian" data-lang="Serbian">Serbian</a></li>
+						<li><a href="#" class="Slovak" data-lang="Slovak">Slovak</a></li>
+						<li><a href="#" class="Slovenian" data-lang="Slovenian">Slovenian</a></li>
+						<li><a href="#" class="Somali" data-lang="Somali">Somali</a></li>
+						<li><a href="#" class="Spanish" data-lang="Spanish">Spanish</a></li>
+						<li><a href="#" class="Swahili" data-lang="Swahili">Swahili</a></li>
+						<li><a href="#" class="Swedish" data-lang="Swedish">Swedish</a></li>
+						<li><a href="#" class="Tamil" data-lang="Tamil">Tamil</a></li>
+						<li><a href="#" class="Telugu" data-lang="Telugu">Telugu</a></li>
+						<li><a href="#" class="Thai" data-lang="Thai">Thai</a></li>
+						<li><a href="#" class="Turkish" data-lang="Turkish">Turkish</a></li>
+						<li><a href="#" class="Ukrainian" data-lang="Ukrainian">Ukrainian</a></li>
+						<li><a href="#" class="Urdu" data-lang="Urdu">Urdu</a></li>
+						<li><a href="#" class="Vietnamese" data-lang="Vietnamese">Vietnamese</a></li>
+						<li><a href="#" class="Welsh" data-lang="Welsh">Welsh</a></li>
+						<li><a href="#" class="Yiddish" data-lang="Yiddish">Yiddish</a></li>
+						<li><a href="#" class="Yoruba" data-lang="Yoruba">Yoruba</a></li>
+						<li><a href="#" class="Zulu" data-lang="Zulu">Zulu</a></li>
+					</ul>
+				</li>
+			</ul><!--/#translation-links-->
+			<div id="header-search">
+				<span id="header-search-toggle"><img src="_assets_/images/search-icon.png" alt="search"></span>
+				<div id="search">
+					<form class="search-form" method="GET" action="search.php" role="search" aria-label="sitewide">
+						<label for="search-input"><span class="sr-only">Search</span></label>
+						<input name="q" class="form-control search-input" placeholder="Enter search terms..." type="search" id="search-input">
+						<button type="submit">Go</button>
+					</form>
+				</div><!-- /#search -->
+			</div><!--/#header-search-->
+		</div><!--/#header-right-box-->
+	</div><!--/#header-in-->
+</header>
+
+<section id="slider" class="tiny-slider-wrap has-edit-buttons" role="complementary" aria-label="page banner">
+
+	<div class="center-bottom">
+		<div class="rz-btns-container">
+			<span class="rzBtn">Edit Slider</span>
+		</div>				
+	</div>
+
+	<div id="hero-slider-box">
+		<ul class="tiny-slider">
+			<li class='tiny-item'>
+				<div class="tns-lazy-img tns-bg-slide" data-style="background:url(_assets_/images/freeform-slide-1.jpg) center/cover no-repeat" role="img" aria-label="Slide image"></div>
+			</li>
+			<li class='tiny-item'>
+				<div class="tns-lazy-img tns-bg-slide" data-style="background:url(_assets_/images/freeform-slide-1.jpg) center/cover no-repeat" role="img" aria-label="Slide image"></div>
+			</li>
+		</ul><!--/.tiny-slider-->
+		<div id="slider-btns">
+			<button id="slider-prev">
+				<img src="_assets_/images/slider-prev.png" alt="prev">
+			</button>
+			<button id="slider-next">
+				<img src="_assets_/images/slider-next.png" alt="next">
+			</button>
+		</div><!--/#slider-btns-->
+	</div><!--/#hero-slider-box-->
+	<h1 id="page-title" class="container">Interior Page Title</h1>
+</section><!--/#slider-->
+
+<div id="freeform-wrap">
+	<div class="container">
+		<div id="freeform-in">
+			<aside id="freeform-left">
+				<nav id="flyout-wrap" aria-labelledby="flyout-header" class="has-edit-buttons">
+					<div class="right-top">
+						<div class="rz-btns-container rz-btns-stacked">
+							<span class="rzBtn rzBtn-sm">Edit Header</span>
+							<span class="rzBtn rzBtn-sm">Edit Left Nav</span>
+						</div>				
+					</div>
+					<h2 id="flyout-header">Related Pages</h2>
+					<ul id="flyout">
+						<li><a href="./">Page Link Title</a></li>
+						<li><a href="./">Page Link Title</a>
+							<ul>
+								<li><a href="./">Flyout link here</a></li>
+								<li><a href="./">Flyout link here</a></li>
+								<li><span>Flyout link here</span></li>
+								<li><a href="./">Flyout link here</a></li>
+								<li><a href="./">Flyout link here</a></li>
+							</ul>
+						</li>
+						<li><span>Page Link Title</span></li>
+						<li><a href="./">Page Link Title</a></li>
+						<li><a href="./">Page Link Title</a></li>
+						<li><a href="./">Page Link Title</a></li>
+						<li><a href="./">Page Link Title</a></li>
+					</ul><!-- /#flyout -->
+				</nav>
+				<div class="aside-box flyout-download has-edit-buttons">
+					<div class="right-top">
+						<div class="rz-btns-container rz-btns-stacked">
+							<span class="rzBtn rzBtn-sm">Edit Header</span>
+							<span class="rzBtn rzBtn-sm">Edit Content</span>
+						</div>				
+					</div>
+					<h2 class="aside-box-header">Resources</h2>
+					<a href="./" class="download-box-wrap">
+						<img src="_assets_/images/file-icon.png" alt="" class="files-icon">
+						<div class="download-box">
+							<div>File Name Lorem Ipsum Turpis</div>
+						</div><!-- /.download-box -->
+					</a><!-- /.download-box-wrap -->
+					<a href="./" class="download-box-wrap">
+						<img src="_assets_/images/file-icon.png" alt="" class="files-icon">
+						<div class="download-box">
+							<div>File Name Lorem Ipsum Turpis</div>
+						</div><!-- /.download-box -->
+					</a><!-- /.download-box-wrap -->
+					<a href="./" class="download-box-wrap">
+						<img src="_assets_/images/file-icon.png" alt="" class="files-icon">
+						<div class="download-box">
+							<div>File Name Lorem Ipsum Turpis</div>
+						</div><!-- /.download-box -->
+					</a><!-- /.download-box-wrap -->
+				</div><!-- /.flyout-download -->
+				<div class="aside-box freeform-location-hours has-edit-buttons">
+					<div class="right-top">
+						<div class="rz-btns-container rz-btns-stacked">
+							<span class="rzBtn rzBtn-sm">Edit Header</span>
+							<span class="rzBtn rzBtn-sm">Edit Content</span>
+						</div>				
+					</div>
+					<h2 class="aside-box-header">Hours</h2>
+					<div class="aside-hours"> 
+						<strong>MON</strong>  
+						<span>9:00 am - 5:00 pm</span>
+					</div>
+					<div class="aside-hours"> 
+						<strong>TUES</strong>  
+						<span>9:00 am - 5:00 pm</span>
+					</div>
+					<div class="aside-hours"> 
+						<strong>WED</strong>  
+						<span>9:00 am - 5:00 pm</span>
+					</div>
+					<div class="aside-hours"> 
+						<strong>THU</strong>  
+						<span>9:00 am - 5:00 pm</span>
+					</div>
+					<div class="aside-hours"> 
+						<strong>FRI</strong>  
+						<span>9:00 am - 5:00 pm</span>
+					</div>
+					<div class="aside-hours"> 
+						<strong>SAT</strong>  
+						<span>9:00 am - 5:00 pm</span>
+					</div>
+					<div class="aside-hours"> 
+						<strong>SUN</strong>  
+						<span>9:00 am - 5:00 pm</span>
+					</div>
+				</div><!-- /.freeform-location-hours -->
+				<div class="aside-box freeform-contact-us has-edit-buttons">
+					<div class="right-top">
+						<div class="rz-btns-container rz-btns-stacked">
+							<span class="rzBtn rzBtn-sm">Edit Header</span>
+							<span class="rzBtn rzBtn-sm">Edit Contact Details</span>
+						</div>				
+					</div>
+					<h2 class="aside-box-header">Contact Us</h2>
+					<div class="freeform-contact-img-box">
+						<img src="_assets_/images/aside-contact-img.jpg" alt="Contact image">
+					</div>
+					<div class="freeform-contact-name">Jane Doe</div>
+					<div class="freeform-contact-title">Position Title Lorem Ipsum</div>
+					<div class="freeform-contact-box">
+						<img src="_assets_/images/aside-address-icon.png" alt="">
+						<address>
+							<a href="./" target="_blank">1234 Street Name<br> City, ST 56789</a>
+						</address>
+					</div>
+					<div class="freeform-contact-box">
+						<img src="_assets_/images/aside-phone-icon.png" alt="">
+						<a href="tel:5555551234" class="aside-phone">555.555.1234</a>
+					</div>
+					<div class="freeform-contact-box">
+						<img src="_assets_/images/aside-fax-icon.png" alt="">
+						<span>555.555.1234</span>
+					</div>
+					<div class="freeform-contact-box">
+						<img src="_assets_/images/aside-mail-icon.png" alt="">
+						<a href="mailto:jane@email.com" class="freeform-contact-email">jane@email.com</a>
+					</div>
+					<div class="freeform-contact-box">
+						<div class="freeform-contact-text">
+							Extra text can go here velit mattis pharetra adipiscing convallis orci.
+						</div>
+					</div>
+				</div><!-- /.freeform-contact-us -->
+			</aside>
+			<div id="freeform-right">
+				<div id="entry">
+					<nav id="breadcrumbs" aria-label="breadcrumb">
+						<ul>
+							<li><a href="./">Home</a></li>
+							<li><a href="./">Parent Page</a></li>
+							<li>Current Page</li>
+						</ul>
+					</nav><!-- /#breadcrumbs -->
+					<main id="freeform-main" class="has-edit-buttons">
+
+						<div class="right-top">
+							<div class="rz-btns-container">
+								<span class="rzBtn">Edit Content</span>
+							</div>				
+						</div>
+
+						<div id="post" class="clearfix">
+							<h2 class="subheader">Section Header</h2>
+							<p>Nisi, donec risus nec arcu. Sed diam rutrum nulla porttitor dolor varius proin pellentesque. Nunc velit nunc posuere sit nisl aliquam duis netus. Auctor nunc, tellus convallis ornare mauris quis posuere vitae. Fusce nulla sed diam aliquet morbi. Platea pretium aliquet ornare sed neque. Bibendum mattis mollis laoreet velit nibh vitae mauris pharetra, neque.</p>
+							<img src="_assets_/images/freeform-img.jpg" alt="placeholder image">
+							<br>
+							<br>
+							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque. <strong><u>Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</u></strong> Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis. Maecenas faucibus mollis interdum.</p>
+							<ul>
+								<li>Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus.</li>
+								<li>Nullam id dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus magna, vel sceleris.</li>
+							</ul>
+							<h2 class="subheader">Section Header</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+							<blockquote>
+								Dui dictum lacus, nisi sed ac ultricies dignissim lectus. Praesent mauris, donec id vulputate eu mattis molestie iaculis. Cras sed et adipiscing leo senectus cursus.
+							</blockquote>
+							<div class="row">
+								<div class="col-md-8 order-2">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo cras elementum vitae, quisque lectus quisque neque. Ac pharetra consectetur sed egestas adipiscing fermentum viverra vel. Cras leo mi vulputate sollicitudin. Id pulvinar tincidunt sed mi sed malesuada ac posuere nibh. Pretium urna, ac a in ipsum augue laoreet. Praesent adipiscing et auctor semper.</p>
+									<p class="mb-0">Dolor malesuada a habitant ullamcorper. Ac leo tortor cursus semper nibh arcu in. Sapien viverra id nunc, sed hendrerit in malesuada ultrices ullamcorper. Turpis morbi at morbi adipiscing fusce nulla. Netus sed quam nulla nunc pretium. Et volutpat convallis ut consectetur phasellus fermentum, dui. Consectetur elementum aliquet nec sapien, semper mi risus ut. Quisque massa scelerisque ipsum, nam risus. Mauris nibh auctor pellentesque quis tellus, blandit.</p>
+								</div>
+								<div class="col-md-4 order-md-2 order-1 mb-3">
+									<img src="_assets_/images/post-img.jpg" alt="placeholder image">
+								</div>
+							</div>
+						</div><!-- /#post -->
+					</main><!-- /#freeform-main -->
+
+					<div class="freeform-accordion">
+						<div class="has-edit-buttons">
+
+							<div class="right-top">
+								<div class="rz-btns-container">
+									<span class="rzBtn">Edit Header</span>
+								</div>				
+							</div>
+
+							<h2 class="subheader">Faq</h2>
+						</div>
+						<div class="freeform-accordion-in has-edit-buttons">
+
+							<div class="right-top">
+								<div class="rz-btns-container">
+									<span class="rzBtn">Edit</span>
+								</div>				
+							</div>
+
+							<div class="accordion">
+								<div class="accordion-box">
+									<div class="accordion-top">
+										<strong class="accordion-header">Ipsum metus eu hendrerit posuere arcu pharetra dolor</strong>
+										<div class="accordion-signs-wrap">
+											<div class="accordion-signs">
+												<img src="_assets_/images/accordion-plus.png" class="accordion-plus" alt="+">
+												<img src="_assets_/images/accordion-minus.png" class="accordion-minus" alt="-">
+											</div>
+										</div><!-- /.accordion-signs-wrap -->
+									</div><!-- /.accordion-top -->
+									<div class="accordion-content">
+										<h3 class="accordion-content-header">Inner headline</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo cras elementum vitae, quisque lectus quisque neque. Ac pharetra consectetur sed egestas adipiscing fermentum viverra vel. Cras leo mi vulputate sollicitudin. Id pulvinar tincidunt sed mi sed malesuada ac posuere nibh. Pretium urna, ac a in ipsum augue laoreet. Praesent adipiscing et auctor semper.</p>
+										<p>Dolor malesuada a habitant ullamcorper. Ac leo tortor cursus semper nibh arcu in. Sapien viverra id nunc, sed hendrerit in malesuada ultrices ullamcorper. Turpis morbi at morbi adipiscing fusce nulla. Netus sed quam nulla nunc pretium. Et volutpat convallis ut consectetur phasellus fermentum, dui. Consectetur elementum aliquet nec sapien, semper mi risus ut. Quisque massa scelerisque ipsum, nam risus. Mauris nibh auctor pellentesque quis tellus, blandit.</p>
+									</div><!-- /.accordion-content -->
+								</div><!-- /.accordion-box -->
+								<div class="accordion-box">
+									<div class="accordion-top">
+										<strong class="accordion-header">Ipsum metus eu hendrerit posuere arcu pharetra dolor</strong>
+										<div class="accordion-signs-wrap">
+											<div class="accordion-signs">
+												<img src="_assets_/images/accordion-plus.png" class="accordion-plus" alt="+">
+												<img src="_assets_/images/accordion-minus.png" class="accordion-minus" alt="-">
+											</div>
+										</div><!-- /.accordion-signs-wrap -->
+									</div><!-- /.accordion-top -->
+									<div class="accordion-content">
+										<h3 class="accordion-content-header">Inner headline</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo cras elementum vitae, quisque lectus quisque neque. Ac pharetra consectetur sed egestas adipiscing fermentum viverra vel. Cras leo mi vulputate sollicitudin. Id pulvinar tincidunt sed mi sed malesuada ac posuere nibh. Pretium urna, ac a in ipsum augue laoreet. Praesent adipiscing et auctor semper.</p>
+										<p>Dolor malesuada a habitant ullamcorper. Ac leo tortor cursus semper nibh arcu in. Sapien viverra id nunc, sed hendrerit in malesuada ultrices ullamcorper. Turpis morbi at morbi adipiscing fusce nulla. Netus sed quam nulla nunc pretium. Et volutpat convallis ut consectetur phasellus fermentum, dui. Consectetur elementum aliquet nec sapien, semper mi risus ut. Quisque massa scelerisque ipsum, nam risus. Mauris nibh auctor pellentesque quis tellus, blandit.</p>
+									</div><!-- /.accordion-content -->
+								</div><!-- /.accordion-box -->
+								<div class="accordion-box">
+									<div class="accordion-top">
+										<strong class="accordion-header">Ipsum metus eu hendrerit posuere arcu pharetra dolor</strong>
+										<div class="accordion-signs-wrap">
+											<div class="accordion-signs">
+												<img src="_assets_/images/accordion-plus.png" class="accordion-plus" alt="+">
+												<img src="_assets_/images/accordion-minus.png" class="accordion-minus" alt="-">
+											</div>
+										</div><!-- /.accordion-signs-wrap -->
+									</div><!-- /.accordion-top -->
+									<div class="accordion-content">
+										<h3 class="accordion-content-header">Inner headline</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo cras elementum vitae, quisque lectus quisque neque. Ac pharetra consectetur sed egestas adipiscing fermentum viverra vel. Cras leo mi vulputate sollicitudin. Id pulvinar tincidunt sed mi sed malesuada ac posuere nibh. Pretium urna, ac a in ipsum augue laoreet. Praesent adipiscing et auctor semper.</p>
+										<p>Dolor malesuada a habitant ullamcorper. Ac leo tortor cursus semper nibh arcu in. Sapien viverra id nunc, sed hendrerit in malesuada ultrices ullamcorper. Turpis morbi at morbi adipiscing fusce nulla. Netus sed quam nulla nunc pretium. Et volutpat convallis ut consectetur phasellus fermentum, dui. Consectetur elementum aliquet nec sapien, semper mi risus ut. Quisque massa scelerisque ipsum, nam risus. Mauris nibh auctor pellentesque quis tellus, blandit.</p>
+									</div><!-- /.accordion-content -->
+								</div><!-- /.accordion-box -->
+								<div class="accordion-box">
+									<div class="accordion-top">
+										<strong class="accordion-header">Ipsum metus eu hendrerit posuere arcu pharetra dolor</strong>
+										<div class="accordion-signs-wrap">
+											<div class="accordion-signs">
+												<img src="_assets_/images/accordion-plus.png" class="accordion-plus" alt="+">
+												<img src="_assets_/images/accordion-minus.png" class="accordion-minus" alt="-">
+											</div>
+										</div><!-- /.accordion-signs-wrap -->
+									</div><!-- /.accordion-top -->
+									<div class="accordion-content">
+										<h3 class="accordion-content-header">Inner headline</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo cras elementum vitae, quisque lectus quisque neque. Ac pharetra consectetur sed egestas adipiscing fermentum viverra vel. Cras leo mi vulputate sollicitudin. Id pulvinar tincidunt sed mi sed malesuada ac posuere nibh. Pretium urna, ac a in ipsum augue laoreet. Praesent adipiscing et auctor semper.</p>
+										<p>Dolor malesuada a habitant ullamcorper. Ac leo tortor cursus semper nibh arcu in. Sapien viverra id nunc, sed hendrerit in malesuada ultrices ullamcorper. Turpis morbi at morbi adipiscing fusce nulla. Netus sed quam nulla nunc pretium. Et volutpat convallis ut consectetur phasellus fermentum, dui. Consectetur elementum aliquet nec sapien, semper mi risus ut. Quisque massa scelerisque ipsum, nam risus. Mauris nibh auctor pellentesque quis tellus, blandit.</p>
+									</div><!-- /.accordion-content -->
+								</div><!-- /.accordion-box -->
+								<div class="accordion-box">
+									<div class="accordion-top">
+										<strong class="accordion-header">Ipsum metus eu hendrerit posuere arcu pharetra dolor</strong>
+										<div class="accordion-signs-wrap">
+											<div class="accordion-signs">
+												<img src="_assets_/images/accordion-plus.png" class="accordion-plus" alt="+">
+												<img src="_assets_/images/accordion-minus.png" class="accordion-minus" alt="-">
+											</div>
+										</div><!-- /.accordion-signs-wrap -->
+									</div><!-- /.accordion-top -->
+									<div class="accordion-content">
+										<h3 class="accordion-content-header">Inner headline</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo cras elementum vitae, quisque lectus quisque neque. Ac pharetra consectetur sed egestas adipiscing fermentum viverra vel. Cras leo mi vulputate sollicitudin. Id pulvinar tincidunt sed mi sed malesuada ac posuere nibh. Pretium urna, ac a in ipsum augue laoreet. Praesent adipiscing et auctor semper.</p>
+										<p>Dolor malesuada a habitant ullamcorper. Ac leo tortor cursus semper nibh arcu in. Sapien viverra id nunc, sed hendrerit in malesuada ultrices ullamcorper. Turpis morbi at morbi adipiscing fusce nulla. Netus sed quam nulla nunc pretium. Et volutpat convallis ut consectetur phasellus fermentum, dui. Consectetur elementum aliquet nec sapien, semper mi risus ut. Quisque massa scelerisque ipsum, nam risus. Mauris nibh auctor pellentesque quis tellus, blandit.</p>
+									</div><!-- /.accordion-content -->
+								</div><!-- /.accordion-box -->
+							</div><!-- /.accordion -->
+						</div><!-- /.freeform-accordion-in -->
+					</div><!--/.freeform-accordion-->
+
+				</div><!--/#entry-->
+			</div><!-- /#freeform-right -->
+		</div><!-- /#freeform-in -->
+	</div><!-- /.container -->
+</div><!--/#freeform-wrap-->
+
+<footer class="site-footer">
+	<div id="footer-bg-img" style="background:url('_assets_/images/footer-bg-img.jpg') center/cover no-repeat"></div>
+	<div class="container">
+		<div id="footer-top">
+			<div class="footer-top-box">
+				<div id="footer-logo-wrap">
+					<a href="./" id="footer-logo"><img src="_assets_/images/footer-logo.png" alt="navigation logo"></a>
+				</div>
+				<div>
+					<a href="./" class="footer-social-btn" aria-label="Follow us on social media">
+						<img src="_assets_/images/plus-solid.png" class="footer-social-btn-plus" alt="+">
+						<div class="footer-social-btn-txt">Follow us on social media!</div>
+					</a>
+				</div>
+			</div><!-- /.footer-top-box -->
+			<div class="footer-top-box">
+				<h3 class="footer-top-header">Contact</h3>
+				<ul class="footer-list">
+					<li><a href="./" class="footer-list-link">Link Name Lorem Ipsum</a></li>
+					<li><a href="./" class="footer-list-link">Link Name Lorem Ipsum</a></li>
+					<li><a href="./" class="footer-list-link">Link Name Lorem Ipsum</a></li>
+					<li><a href="./" class="footer-list-link">Link Name Lorem Ipsum</a></li>
+					<li><a href="./" class="footer-list-link">Link Name Lorem Ipsum</a></li>
+				</ul>
+			</div><!-- /.footer-top-box -->
+			<div class="footer-top-box">
+				<h3 class="footer-top-header">Section Header</h3>
+				<ul class="footer-list">
+					<li><a href="./" class="footer-list-link">Link Name Lorem Ipsum</a></li>
+					<li><a href="./" class="footer-list-link">Link Name Lorem Ipsum</a></li>
+					<li><a href="./" class="footer-list-link">Link Name Lorem Ipsum</a></li>
+					<li><a href="./" class="footer-list-link">Link Name Lorem Ipsum</a></li>
+					<li><a href="./" class="footer-list-link">Link Name Lorem Ipsum</a></li>
+					<li><a href="./" class="footer-list-link">Link Name Lorem Ipsum</a></li>
+				</ul>
+			</div><!-- /.footer-top-box -->
+			<div class="footer-top-box">
+				<h3 class="footer-top-header">Section Header</h3>
+				<ul class="footer-list">
+					<li><a href="./" class="footer-list-link">Link Name Lorem Ipsum</a></li>
+					<li><a href="./" class="footer-list-link">Link Name Lorem Ipsum</a></li>
+					<li><a href="./" class="footer-list-link">Link Name Lorem Ipsum</a></li>
+					<li><a href="./" class="footer-list-link">Link Name Lorem Ipsum</a></li>
+					<li><a href="./" class="footer-list-link">Link Name Lorem Ipsum</a></li>
+					<li><a href="./" class="footer-list-link">Link Name Lorem Ipsum</a></li>
+				</ul>
+			</div><!-- /.footer-top-box -->
+			<div class="footer-top-box">
+				<h3 class="footer-top-header">Section Header</h3>
+				<ul class="footer-list">
+					<li><a href="./" class="footer-list-link">Link Name Lorem Ipsum</a></li>
+					<li><a href="./" class="footer-list-link">Link Name Lorem Ipsum</a></li>
+					<li><a href="./" class="footer-list-link">Link Name Lorem Ipsum</a></li>
+					<li><a href="./" class="footer-list-link">Link Name Lorem Ipsum</a></li>
+					<li><a href="./" class="footer-list-link">Link Name Lorem Ipsum</a></li>
+					<li><a href="./" class="footer-list-link">Link Name Lorem Ipsum</a></li>
+				</ul>
+			</div><!-- /.footer-top-box -->
+		</div><!--/#footer-top-->
+		<div id="footer-bottom">
+			<span class="footer-spacer">
+				Powered by 
+				<a href="https://www.revize.com" id="revize-link" target="_blank" aria-label="Revize, the Government Website Experts">
+					<img src="_assets_/images/revize-logo.png" alt="revize.">
+				</a>, the Government Website Experts
+			</span>
+			<span class="footer-spacer">
+				<a href="./" id="revize-login" aria-label="Login to site">Login</a>
+			</span>
+			<a href="./" class="privacy-policy" aria-label="Disclaimer of Privacy Policy">Disclaimer of Privacy Policy</a>
+		</div><!--/#footer-bottom-->
+	</div><!--/.container-->
+</footer>
+
+<!-- ENABLERS: update include statement with revize code -->
+<?php include "_includes_/share_widget.php"; ?>
+
+<script src="_assets_/plugins/tiny-slider/dist/min/tiny-slider.js"></script>
+<script src="_assets_/js/scripts.js"></script>
+
+</body>
+</html>

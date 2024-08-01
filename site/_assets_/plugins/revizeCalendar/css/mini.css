@@ -1,0 +1,59 @@
+#homepage .calendar-wrap{display:flex;justify-content:space-between}
+#homepage .mini-calendar{display:block!important;width:46.1%;background:#fff;height:100%;position:relative;padding-bottom:30px;padding-top:15px}
+#homepage .fc-toolbar-title{font:400 20px 'HCo Gotham SSm',sans-serif;color:var(--brandcolor);padding:19px 0;text-transform:uppercase;letter-spacing:2.4px}
+#homepage .fc-prev-button, #homepage .fc-next-button{display:inline-flex;align-items:center;justify-content:center;background-color:unset!important;border-color:transparent;padding:0;margin:0 31px}
+#homepage .fc-prev-button .fc-icon, #homepage .fc-next-button .fc-icon{vertical-align:unset;font-size:unset;width:30px;height:30px}
+#homepage .fc-icon-chevron-left:before{content:"";display:inline-block;background:url(../../../images/calendar-prev.png) center/cover no-repeat;width:30px;height:30px}
+#homepage .fc-icon-chevron-right:before{content:"";display:inline-block;background:url(../../../images/calendar-next.png) center/cover no-repeat;width:30px;height:30px}
+#homepage .fc-button-group{position:absolute;top:1px;left:50%;transform:translateX(-50%);margin-left:0}
+#homepage .fc-button-group button{border-radius:unset;font-size:13px;padding:2px 5px;margin:0 1px;background:var(--Colors-Theme-Blue---Medium)!important;border-color:var(--Colors-Theme-Blue---Medium)!important}
+#homepage .fc-dayGridMonth-button.fc-button.fc-button-primary{display:block}
+#homepage .fc-dayGridMonth-button.fc-button.fc-button-primary.fc-button-active{display:none}
+#homepage .fc-today-button.fc-button.fc-button-primary:has(+ .fc-dayGridMonth-button.fc-button.fc-button-primary){display:block}
+#homepage .fc-today-button.fc-button.fc-button-primary:has(+ .fc-dayGridMonth-button.fc-button.fc-button-primary.fc-button-active){display:none}
+#homepage .fc-dayGridMonth-view{padding:0 30px}
+#homepage .fc-toolbar.fc-header-toolbar{margin-bottom:8px}
+#homepage .fc .fc-daygrid-day-top{justify-content:center}
+#homepage .fc-theme-standard td, .fc-theme-standard th{border:none}
+#homepage .fc-theme-standard .fc-scrollgrid{border:none}
+#homepage .fc-dayGridMonth-view .fc-daygrid-day-events{display:none}
+#homepage .fc-dayGridDay-view{padding:0 10px}
+#homepage .fc-col-header-cell a{font:700 16px 'HCo Gotham SSm',sans-serif;color:var(--brandcolor);text-transform:capitalize;margin:9px 0;text-decoration:none}
+#homepage a.fc-daygrid-day-number{font:700 16px 'HCo Gotham SSm',sans-serif;color:var(--brandcolor);text-decoration:none;pointer-events:none;padding:14px 0;margin:1px}
+#homepage .day-has-event .fc-daygrid-day-top a{color:#fff;display:flex;align-items:center;justify-content:center;width:100%;height:100%;min-height:100%;text-decoration:none;pointer-events:all}
+#homepage .day-has-event .fc-daygrid-day-top a::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:var(--Surfaces-primary-dark)!important;z-index:-1}
+#homepage .day-has-event .fc-daygrid-day-top a:hover{opacity:1}
+#homepage .fc .fc-day-other .fc-daygrid-day-top a{font-weight:400;color:var(--darkgray)}
+#homepage .fc .fc-day-other .fc-daygrid-day-top{opacity:1}
+#homepage .fc .fc-daygrid-day.fc-day-today{background-color:unset}
+#homepage .fc-dayGridMonth-view .fc-day-today .fc-daygrid-day-top a{color:#1B1B1B;display:flex;align-items:center;justify-content:center;width:100%;height:100%;min-height:100%;text-decoration:underline;text-underline-offset:3px}
+#homepage .fc-dayGridMonth-view .fc-day-today .fc-daygrid-day-top a::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:#F2F2F2;z-index:-1}
+#homepage .fc-dayGridMonth-view .day-has-event.fc-day-today .fc-daygrid-day-top a{color:#fff}
+
+#homepage .mini-list-loaded{display:block!important;width:46.1%}
+#homepage .event{position:relative;cursor:pointer}
+#homepage .event-in-wrap{display:flex;flex-wrap:wrap;height:88px;overflow:auto;padding:5px 10px}
+#homepage .event-in{width:100%;align-self:center}
+#homepage .event:not(:last-of-type){border-bottom:2px solid var(--Colors-Grayscale-200)}
+#homepage .event-date{background:transparent;font:700 14px 'HCo Gotham SSm',sans-serif;color:var(--Colors-Theme-Dark-Gold)}
+#homepage .event-title{font:700 18px 'HCo Gotham SSm',sans-serif;color:var(--Colors-Theme-Blue---Medium);line-height:140%;margin:10px 0 0;transition:all .3s}
+#homepage .event:hover .event-title{color:var(--Colors-Theme-Secondary-700)}
+
+#calendar .fc-button-primary{background-color:#0F3356!important;border-color:#0F3356}
+#calendar .fc-button-primary:not(:disabled):active,#calendar .fc-button-primary:not(:disabled).fc-button-active{background-color:#1576B0!important;border-color:#1576B0}
+#calendar td.fc-day-today{background:#0F3356}
+#calendar td.fc-day-today a{color:#fff}
+
+@media only screen and (max-width:991px){
+    #homepage .calendar-wrap{flex-wrap:wrap}
+    #homepage .mini-calendar{width:500px;max-width:100%}
+    #homepage .mini-list-loaded{width:100%;margin-top:30px}
+    #homepage .fc-button-group{right:auto;left:50%;transform:translateX(-50%)}
+}
+
+@media only screen and (max-width:479px){
+    #homepage .fc-toolbar-title{font-size:16px}
+    #homepage .fc-col-header-cell a{font-size:14px}
+    #homepage .fc-prev-button, #homepage .fc-next-button{margin-left:8px;margin-right:8px}
+    #homepage .fc-dayGridMonth-view{padding:0 10px}
+}

@@ -1,0 +1,999 @@
+/*-----------------------------------------------------------------------------------
+
+	Theme Name: City of Clovis, CA
+	Front-end developer: Hayk Galoyan
+	Author Design: Toshe Vladevski
+	Author URI: https://www.revize.com/
+	Date: mm/dd/yyyy
+
+-----------------------------------------------------------------------------------*/
+/* -----------------------------------------
+
+#fonts
+
+-----------------------------------------*/
+
+/* "Gotham" fonts are provided by the client */
+
+@font-face {
+	font-family: 'HCo Gotham SSm';
+	src:url('../fonts/GothamSSm-Book_Web.woff2') format('woff2'),
+		url('../fonts/GothamSSm-Book_Web.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HCo Gotham SSm';
+	src:url('../fonts/GothamSSm-Bold_Web.woff2') format('woff2'),
+		url('../fonts/GothamSSm-Bold_Web.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Times+New+Roman:ital,wght@0,400;1,400&display=swap');
+
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&display=swap'); */
+
+@font-face {
+	font-family: 'Merriweather Sans';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/merriweathersans/v26/2-cO9IRs1JiJN1FRAMjTN5zd9vgsFF_5asQTb6hZ2JKZRekViesH.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+
+
+/* -----------------------------------------
+
+#basic styles
+
+-----------------------------------------*/
+
+/* very important!!! Assign these colors */
+
+:root {
+	--brandcolor: #1B1B1B; /* Choose a dark color form the website color palette */
+	--darkgray: #6D6F64; /* Choose a lighter color form the website color palette */
+	--lightgray: #F2F2F2; /* Choose a very light color form the website color palette */
+	--Surfaces-primary-dark: #14191B;
+	--Surfaces-white: #fff;
+	--Colors-Theme-Red: #B3272D;
+	--Typography-black: #000;
+	--Typography-secondary: #4D4D4D;
+	--Colors-Theme-Blue---Medium: #0F3356;
+	--Colors-Theme-Blue---Dark: #26363D;
+	--Colors-Theme-Dark-Beige: #B9A87E;
+	--Colors-Theme-Light-Beige: #ECE1C7;
+	--Colors-Theme-Blue---Lightest: #E3ECF6;
+	--Colors-Grayscale-200: #CCC;
+	--Colors-Theme-Secondary-300: #E1A9AB;
+	--Colors-Theme-Secondary-700: #8F1F24;
+	--Colors-Theme-Secondary-900: #240809;
+	--Colors-Theme-Dark-Gold: #77530D;
+	--Colors-Theme-Secondary-100: #F9EAEB;
+	--Colors-Theme-Secondary-100---Sky: #0086BF;
+	--Colors-Grayscale-300: #B3B3B3;
+
+
+}
+
+body {
+	background: #FBF9F9; 
+	font-size: 16px;
+	line-height: 150%;
+	font-family: 'HCo Gotham SSm',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+	color: var(--brandcolor);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+	overflow-x: hidden;
+	top: 0 !important
+}
+
+/* -----------------------------------------
+
+#typography
+
+-----------------------------------------*/
+h1,h2,h3,h4,h5,h6{color:#111;font-weight:400;margin-bottom:20px;line-height:1.2}
+h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{font-weight:inherit}
+h1{font-size:36px}
+h2{font-size:32px}
+h3{font-size:28px}
+h4{font-size:21px}
+h5{font-size:16px}
+h6{font-size:14px}
+.header{font:700 64px 'HCo Gotham SSm',sans-serif;color:var(--brandcolor);margin-bottom:20px}
+.subheader{font:400 24px 'HCo Gotham SSm',sans-serif;color:var(--brandcolor);text-transform:uppercase;margin-bottom:15px;letter-spacing:2px}
+p{margin:0 0 20px}
+em{font-style:italic}
+strong,b{font-weight:700}
+small{font-size:80%}
+hr{border:solid var(--lightgray);border-width:1px 0 0;clear:both;margin:10px 0 30px;height:0}
+
+/* -----------------------------------------
+
+#links
+
+-----------------------------------------*/
+a,a:visited{text-decoration:underline;-webkit-transition:color .3s ease;-moz-transition:color .3s ease;-o-transition:color .3s ease;transition:color .3s ease;-webkit-transition:background .3s ease;-moz-transition:background .3s ease;-o-transition:background .3s ease;transition:background .3s ease;color:var(--brandcolor)}
+p a,p a:visited{line-height:inherit}
+
+/* -----------------------------------------
+
+#lists
+
+-----------------------------------------*/
+ul,ol{margin-bottom:20px;margin-left:10px}
+ul{list-style:disc}
+ol{list-style:decimal}
+ul ul,ul ol,ol ol,ol ul{margin:4px 0 5px 30px}
+ul ul li,ul ol li,ol ol li,ol ul li{margin-bottom:6px}
+li{line-height:1.3;margin-bottom:7px}
+li p{line-height:1.3}
+
+/* -----------------------------------------
+
+#images
+
+-----------------------------------------*/
+img{max-width:100%;height:auto}
+a img{border:none}
+.alignleft{float:left;clear:left;margin:0 20px 20px}
+.alignright{float:right;margin:0 0 20px 20px}
+.alignnone{margin:0 auto 20px;display:block}
+img[align="right"],img[style*="float: right"],img[style*="float:right"]{margin:0 0 20px 20px}
+img[align="left"],img[style*="float: left"],img[style*="float:left"]{margin:0 20px 20px 0}
+
+/* -----------------------------------------
+
+#buttons
+
+-----------------------------------------*/
+.span button{color:#fff!important;text-decoration:none}
+span.btn a{color:#fff!important;text-decoration:none}
+span.button a{color:#fff!important;text-decoration:none}
+.btn{color:#fff!important;text-decoration:none}
+.btn,
+.button,
+a.button,
+#post button:not(.rz-agenda-search-submit),
+#post input[type="submit"],
+#post input[type="reset"],
+#post input[type="button"],
+.rz-btn{padding:.375rem .75rem;background:var(--brandcolor);color:#fff;border:0;border-radius:0;display:inline-block;font-size:1rem;font-weight:400;text-decoration:none;cursor:pointer;line-height:1.5;vertical-align:middle;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";transition:all .3s}
+.button:hover,
+a.button:hover,
+#post button:hover,
+#post input[type="submit"]:hover,
+#post input[type="reset"]:hover,
+#post input[type="button"]:hover,
+.rz-btn:hover{-webkit-box-shadow:none;-moz-box-shadow:none;-o-box-shadow:none;box-shadow:none;background:var(--brandcolor);color:#fff}
+.button:active,
+a.button:active,
+#post button:active,
+#post input[type="submit"]:active,
+#post input[type="reset"]:active,
+#post input[type="button"]:active,
+.rz-btn:active{-webkit-box-shadow:none;-moz-box-shadow:none;-o-box-shadow:none;box-shadow:none;background:var(--brandcolor);color:#fff}
+#post button::-moz-focus-inner,
+#post input::-moz-focus-inner{border:0;padding:0}
+
+
+/* -----------------------------------------
+
+#revize edit buttons DO NOT MODIFY
+
+-----------------------------------------*/
+/* ----------------------------------------- #helpers and positioning for revize buttons -----------------------------------------*/
+.relative{position:relative!important}
+.absolute{position:absolute!important}
+.static{position: static!important}
+.user-logged-in{box-shadow: 0 0 10px rgba(21,0,56,0);padding:14px}
+.rz-bar-center-col{display:none!important}
+
+/* default position for revize buttons is top right DO NOT WRAP - Check Below for other positioning */
+.rz-btns-container{line-height:1.5!important;font-size:16px;opacity:0;background:#fff;padding:4px;box-shadow:0px 2px 10px rgba(21, 0, 56, 0.08);border:1px solid rgba(21, 0, 56,.1);transform:translateY(10px);transition:all .2s;position:absolute;top:0;right:0;z-index:9;white-space:nowrap}
+.rz-btns-stacked{padding:6px 6px 0!important}
+
+/* 
+to reposition '.rz-btns-container' WRAP IT IN A DIV WITH ONE OF THE CLASSES BELOW
+top-left,top-center,right-center,right-bottom,center-bottom,center-center,bottom-left,left-center 
+*/
+.left-top{top:0!important;right:auto!important;left:0!important;z-index:9;position:absolute}
+.left-top .rz-btns-container{position:relative!important}
+.center-top{top:0!important;right:50%!important;transform:translate(50%, 0)!important;z-index:9;position:absolute}
+.center-top .rz-btns-container{position:relative!important}
+.right-center{top:50%!important;right:0!important;transform:translate(0, -50%)!important;z-index:9;position:absolute}
+.right-center .rz-btns-container{position:relative!important}
+.right-bottom{top:auto!important;right:0!important;bottom:0!important;z-index:9;position:absolute}
+.right-bottom .rz-btns-container{position:relative!important}
+.center-bottom{top:auto!important;right:50%!important;bottom:0!important;transform:translateX(50%)!important;z-index:9;position:absolute}
+.center-bottom .rz-btns-container{position:relative!important}
+.center-center{top:50%!important;right:50%!important;transform:translate(50%, -50%)!important;z-index:9;position:absolute}
+.center-center .rz-btns-container{position:relative!important}
+.left-bottom{top:auto!important;right:auto!important;left:0!important;bottom:0;z-index:9;position:absolute}
+.left-bottom .rz-btns-container{position:relative!important}
+.left-center{top:50%!important;right:auto!important;left:0!important;transform:translate(0, -50%)!important;z-index:9;position:absolute}
+.left-center .rz-btns-container{position:relative!important}
+
+/* ----------------------------------------- rzBtn's -----------------------------------------*/
+.rz-btns-container a{display:inline-block!important}
+.rzBtn{text-transform:capitalize;cursor:pointer;text-decoration:none;position:relative;line-height:1.5!important;display:inline-block!important;letter-spacing:0!important;padding:7px 14px;background:#fff!important;color:#000!important;font-weight:bold!important;font-size:16px;white-space:nowrap;text-align:center;border:1px solid #e6e6e6;transition:all .2s;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"!important}
+.rz-btns-stacked a,.rz-btns-stacked .rzBtn{display:block!important;margin-bottom:6px;text-decoration:none}
+.rzBtn:hover{background:#eee!important;border-color:#ccc;color:#000!important;text-decoration:none}
+.rzBtn-sm{font-size:14px!important;padding:5px 10px!important}
+.rzBtn-xs{font-size:12px!important;padding:3px 6px!important}
+.user-logged-in .yes-has-edit-buttons{position:relative;outline:3px solid transparent;outline-offset:6px}
+.user-logged-in .yes-has-edit-buttons:hover,.show-edit-buttons .user-logged-in .yes-has-edit-buttons{outline:3px solid #6000fe;outline-offset:3px;z-index:10!important;transition:all .2s;min-width:142px;min-height:32px}
+.user-logged-in .yes-has-edit-buttons:hover .rz-btns-container:has(.rzBtn),
+.show-edit-buttons .user-logged-in .yes-has-edit-buttons .rz-btns-container:has(.rzBtn){opacity:1;height:auto;transform:translateY(0);opacity:1}
+.hide-edit-btns .rz-btns-container{display:none}
+.user-not-logged-in .rz-btns-container{display:none!important}
+
+/* -----------------------------------------
+
+#forms
+
+-----------------------------------------*/
+form{margin-bottom:20px}
+fieldset{margin-bottom:20px}
+input[type="text"],input[type="password"],input[type="email"],input[type="search"],textarea,select{border:1px solid var(--darkgray);padding:.375rem .75rem;outline:none;font-size:16px;font-family:sans-serif;color:var(--brandcolor);margin:0;display:inline-block;background:#fff;border-radius:0;box-shadow:none}
+input[type="text"]:focus,input[type="password"]:focus,input[type="email"]:focus,input[type="search"]:focus,textarea:focus{color:var(--brandcolor);border:1px solid var(--darkgray)}
+label,legend{display:block;font-weight:700;font-size:13px}
+input[type="checkbox"]{display:inline}
+label span,legend span{font-weight:400;font-size:16px;color:#444}
+.form-control:focus{border-color:inherit;-webkit-box-shadow:none;box-shadow:none}
+::-webkit-input-placeholder{color:#777}
+:-moz-placeholder{color:#777}
+::-moz-placeholder{color:#777}
+:-ms-input-placeholder{color:#777}
+.gsc-control-cse *{box-sizing:content-box}
+
+/* -----------------------------------------
+
+#rz intranet
+
+-----------------------------------------*/
+form.loginform{background:#fff;padding:30px;border:1px solid #D2DFEF}
+form.loginform p{background:#E65229;color:#fff;padding:20px;line-height:1}
+form.loginform label{font-weight:400}
+form.loginform label input{display:block;margin-bottom:10px;width:100%;box-sizing:border-box;padding:10px;color:#000}
+
+/* -----------------------------------------
+
+#rz alert
+
+-----------------------------------------*/
+.floating-alert{position:fixed;z-index:100;bottom:20px;margin:0;right:20px;background:#fff;box-shadow:0 4px 24px rgba(0,0,0,0.15),0 2px 6px rgba(0,0,0,0.05);color:#666;padding:28px;font-size:14px;width:410px;border-radius:10px;display:flex;flex-direction:column;overflow:hidden;border:0}
+.floating-alert h2{color:var(--brandcolor);margin:0 0 10px;font-size:18px;font-weight:700;line-height:1.3}
+.floating-alert p{margin:0}
+.alert-buttons{margin:28px -28px -28px;border-top:1px solid #eee;display:flex}
+.alert-button{border-right:1px solid #eee;flex:1 1 auto;text-align:center;padding:14px 0;text-decoration:none;color:#000;font-weight:700;line-height:1.5}
+.alert-buttons .alert-button:last-of-type{border:0}
+.alert-button:hover{background:var(--brandcolor);color:#fff;text-decoration:none;cursor:pointer}
+.floating-alert.fade:not(.show){display:none}
+
+/* -----------------------------------------
+
+#rz edit
+
+-----------------------------------------*/
+#event-modal .modal-footer .btn{margin:0 0 0 10px}
+
+/* -----------------------------------------
+
+#main
+
+-----------------------------------------*/
+a:focus{outline:1px dotted}
+.container{width:1254px;max-width:100%;margin:0 auto;padding:0 15px}
+#skip{position:fixed;left:-100%;top:-100%;transition:all .3s;z-index:99999}
+#skip:focus{left:50px;top:50px}
+#calendarEvent{left:0px;max-height:500px;overflow-y:auto;margin:0 auto}
+.text-overflow{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.toggle{display:none}
+
+.section-top{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between}
+.section-title{font:700 48px 'HCo Gotham SSm', sans-serif;color:var(--brandcolor);text-transform:uppercase;line-height:135%;margin:0 20px 15px 0;letter-spacing:4.76px}
+.section-btn{display:inline-flex;align-items:center;font:700 16px 'HCo Gotham SSm', sans-serif;color:var(--Surfaces-white)!important;background:var(--Colors-Theme-Red);text-transform:uppercase;padding:19px 21px;margin-top:6px;text-decoration:none;text-align:center;transition:all .3s}
+.section-btn:hover{background:var(--Colors-Theme-Secondary-700);text-decoration:none}
+
+
+
+
+
+.site-header{position:fixed;left:0;right:0;top:0;z-index:9999;background:var(--Surfaces-white);transition:all .3s}
+
+
+
+
+#header-in{display:flex;align-items:center;justify-content:space-between;height:100px;position:relative;padding:0 48px 0 66px}
+#logo-wrap{display:flex;align-self:flex-start;width:180px;min-width:90px;margin-top:17px;transition:all .3s}
+#logo{display:inline-block;clip-path:circle(51% at 50% 50%)}
+#logo img{display:inline-block;width:180px;transition:all .3s}
+.scrolled #logo-wrap{margin-top:5px}
+.scrolled #logo img{width:90px}
+
+.site-header nav{justify-content:center;flex:1;position:relative}
+#nav{margin:0;padding:0}
+#nav .toggle, #nav .toggle2, #flyout .toggle{display:none;padding:0;font-family:FontAwesome}
+#nav li{margin:0 !important;display:inline-block}
+#nav a,#nav span{display:inline-flex;align-items:center;position:relative;font:700 16px 'Merriweather Sans', sans-serif;color:var(--Colors-Theme-Blue---Medium);text-transform:uppercase;text-decoration:none;padding:0 24.2px;height:100px;text-align:center}
+#nav ul{position:absolute;top:100%;left:92px;right:92px;z-index:99;margin:0;display:none}
+#nav ul a,#nav ul span{display:inline-block;font:700 20px 'HCo Gotham SSm', sans-serif;text-transform:capitalize;padding:0 30px 0 5px;margin-bottom:26px;text-align:left;height:auto!important;outline-offset:-1px}
+#nav ul li{display:block;page-break-inside:avoid}
+#nav ul ul{position:static;padding:0;column-count:1;column-gap:0}
+#nav ul ul a,#nav ul ul span{font:400 16px 'HCo Gotham SSm', sans-serif;color:var(--Typography-black);padding:0 30px 0 5px;margin-bottom:17px}
+#header-right-box{display:flex;align-items:center;justify-content:flex-end;height:100%;margin-left:87px}
+
+/* Google translate*/
+#translation-links{padding:0;margin:0 16px 0 0}
+#translation-links li{position:relative;margin:0;list-style:none;line-height:1.5}
+#translation-links ul{padding:10px 0;margin:0;position:absolute;top:66px;right:0;width:190px;background:#fff;display:none;height:310px;overflow-y:scroll;box-shadow:0px 0px 20px 0px rgba(0, 0, 0, 0.1)}
+#translation-links ul li{margin:0}
+#translation-links ul li a{display:block;text-decoration:none;font-size:16px;color:var(--brandcolor);padding:3px 15px}
+#translation-links ul li a:hover{background:#eee}
+[lang="en"] #translate-reset{display:none}
+#translation-links ul li a[data-lang="English"]{font:700 16px 'HCo Gotham SSm', sans-serif;color:var(--Colors-Theme-Secondary-700)}
+div.skiptranslate{display:none !important}
+#translate-button{border:none;background:none;margin:0;padding:0}
+#translate-button .translate-flag{width:32px;min-width:32px;height:32px;object-fit:cover;border-radius:50%}
+#translate-reset{background:none;border:none;margin:0 3px;padding:0;font:700 14px 'Merriweather Sans', sans-serif;color:var(--Colors-Theme-Blue---Medium);text-transform:uppercase;white-space:nowrap}
+
+/* Search */
+#header-search{position:relative}
+#header-search-toggle{display:inline-flex;align-items:center;justify-content:center;background:var(--lightgray);width:64px;height:64px;cursor:pointer;border-radius:50%}
+#header-search-toggle img{width:28px;height:28px}
+#header-search #search{position:absolute;top:82px;right:0;display:none;margin:0}
+#search{display:block}
+#search form{position:relative;display:inline-block;margin-bottom:0}
+#search label{display:none}
+#search input{width:300px;height:64px;padding:0 60px 0 15px;font:400 16px 'HCo Gotham SSm', sans-serif;color:var(--Typography-black);border:none;box-shadow:0px 0px 20px 0px rgba(0, 0, 0, 0.1);background:#fff}
+#search button{display:flex;justify-content:center;align-items:center;position:absolute;top:50%;right:15px;transform:translateY(-50%);font:700 20px 'HCo Gotham SSm', sans-serif;color:var(--Typography-black);text-transform:uppercase;background:none;border:none;cursor:pointer;outline:none;padding:0}
+#search input::-webkit-input-placeholder{color:var(--darkgray)}
+#search input:-moz-placeholder{color:var(--darkgray)}
+#search input::-moz-placeholder{color:var(--darkgray)}
+#search input:-ms-input-placeholder{color:var(--darkgray)}
+
+
+
+
+
+
+
+/* Section top-links */
+#top-links{position:relative;background: rgba(255, 255, 255, 0.72)}
+#top-links-in{position:relative;padding:0 58px 4px 296px}
+.top-link{display:block;padding:17px 43px;position:relative;text-decoration:none;text-align:center;outline-offset:-1px}
+.top-link::after{content:'';width:4px;height:4px;background:var(--darkgray);position:absolute;top:50%;right:0;transform:translateY(-50%)}
+.top-link:hover{text-decoration:none}
+.top-link-txt{font:700 16px 'HCo Gotham SSm', sans-serif;color:var(--Colors-Theme-Secondary-900);line-height:1.3}
+#top-links-slider div.last .top-link::after{content:none}
+#top-links .tns-controls{display:flex;justify-content:space-between;pointer-events:none;position:absolute;top:53%;transform:translateY(-50%);width:100%}
+#top-links .tns-controls button{font-size:0;border:none;background:unset;position:relative;width:30px;height:31px;padding:0;pointer-events:auto}
+#top-links .tns-controls button:first-of-type{margin-left:-45px}
+#top-links .tns-controls button:last-of-type{margin-right:-45px}
+
+
+/* Section quick links */
+#homepage #main{position:relative;z-index:10;padding-top:124px}
+#quick-links{position:absolute;top:-121px;left:0;z-index:10;margin-bottom:-121px;width:100%}
+#quick-links .container{width:1424px}
+#quick-links-in{display:none;position:relative;z-index:5;padding:0 85px}
+.quick-link{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;text-decoration:none;padding:20px;height:243px;text-align:center;position:relative}
+.quick-link::before{content:'';background:var(--Colors-Theme-Blue---Medium);position:absolute;top:0;left:0;z-index:-1;width:100%;height:100%}
+.quick-link::after{content:'';background:url(../images/ql-hover.png) center/169px 190px no-repeat;position:absolute;top:0;left:0;z-index:-1;width:100%;height:100%;opacity:0;transition:all .3s}
+.quick-link-bg-img{position:absolute;left:0;top:0;width:100%;height:100%;opacity:0.32;transition:all .3s}
+.quick-link-text{width:100%;position:relative;z-index:2;font:700 18px 'HCo Gotham SSm', sans-serif;color:var(--Surfaces-white);line-height:150%}
+.quick-link:hover{text-decoration:none}
+.quick-link:hover::after{opacity:1}
+.quick-link:hover .quick-link-bg-img{opacity:0.04}
+#quick-links .tns-controls{display:flex;justify-content:space-between;pointer-events:none;position:absolute;top:50%;transform:translateY(-50%);width:100%;transition:all .3s}
+#quick-links .tns-controls button{font-size:0;border:none;background:rgba(255, 255, 255, 0.80);position:relative;width:56px;height:67px;padding:0;pointer-events:all;transition:all .3s}
+#quick-links .tns-controls button:hover{background:rgba(255, 255, 255, 1)}
+#quick-links .tns-controls button img{width:30px}
+#quick-links .tns-controls button:first-of-type{margin-left:-96px}
+#quick-links .tns-controls button:last-of-type{margin-right:-96px}
+
+
+
+
+
+
+
+
+/* Section news */
+#news{position:relative;z-index:1;padding-bottom:96px;overflow:hidden}
+#news::before{content:'';position:absolute;top:-1px;right:0;z-index:-1;width:673px;height:781px;background:url(../images/news-bg-img-2.png) center/cover no-repeat}
+#news .section-top{margin-top:112px}
+#news-in{display:flex;justify-content:space-between;margin-top:19px;position:relative}
+#news-in::before{content:'';position:absolute;top:-156px;left:-84px;z-index:-1;width:160px;height:161px;background:url(../images/news-bg-icon.png) center/cover no-repeat}
+#news-left{width:49.35%;height:100%;position:relative}
+.featured-news{display:flex;align-items:flex-end;justify-content:center;position:relative;text-decoration:none;height:473px;overflow:hidden;background:var(--lightgray)}
+.featured-news::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(180deg, rgba(255, 255, 255, 0.00) 37.75%, rgba(255, 255, 255, 0.94) 80%)}
+.featured-news-banner{position:absolute;width:100%;height:100%}
+.featured-news-info{width:100%;padding:33px 28px 33px 32px;position:relative;z-index:1}
+.featured-news-info time{display:block;width:100%;font:700 14px 'HCo Gotham SSm', sans-serif;color:var(--darkgray);text-transform:capitalize}
+.featured-news-title{width:100%;font:700 18px 'HCo Gotham SSm', sans-serif;color:var(--Colors-Theme-Blue---Medium);line-height:150%;margin:11px 0 0}
+.featured-news:hover{text-decoration:none}
+.featured-news:hover::after{background:linear-gradient(180deg, rgba(227, 236, 246, 0.00) 37.75%, rgba(227, 236, 246, 0.94) 80%)}
+#news-left .tns-controls{display:flex;justify-content:space-between;pointer-events:none;position:absolute;top:50%;transform:translateY(-50%);width:100%;z-index:10;opacity:0;transition:opacity .3s}
+#news-left .tns-controls button{font-size:0;border:none;background:unset;position:relative;width:30px;height:30px;padding:0;pointer-events:all}
+#news-left .tns-controls button:first-of-type{margin-left:15px}
+#news-left .tns-controls button:last-of-type{margin-right:15px}
+#news-left:hover .tns-controls{opacity:1}
+#news-right{width:49.35%}
+#news-box{width:100%}
+.h-news{display:flex;align-items:center;height:147px;text-decoration:none;position:relative;background:var(--Surfaces-white)}
+.h-news:not(:last-child){margin-bottom:16px}
+.h-news-banner{height:100%;width:45%;position:relative;overflow:hidden;background-color:var(--lightgray)!important}
+.h-news-info{display:flex;flex-wrap:wrap;align-items:center;width:55%;padding-left:30px;padding-right:20px;height:100%;overflow:auto;position:relative}
+.h-news-info-in{width:100%}
+.h-news-info time{display:block;width:100%;font:700 14px 'HCo Gotham SSm', sans-serif;color:var(--darkgray);text-transform:capitalize}
+.h-news-title{font-weight:700;font-size:18px;color:var(--Typography-primary, #1B1B1B);line-height:1.5;margin:11px 0 0;overflow:hidden}
+.news-read-more{display:inline-block;font-weight:400;font-size:12px;color:var(--dundee-township-il-nearly-black, #142829);text-transform:capitalize;transition:all .3s}
+.h-news:hover{text-decoration:none;background:var(--Colors-Theme-Blue---Lightest)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Section events */
+#events{padding:94px 0 95px;position:relative;z-index:1;background:var(--Colors-Theme-Blue---Lightest)}
+#events::before{content:'';position:absolute;top:0;left:0;z-index:-1;height:100%;width:50%;background-color:var(--Colors-Theme-Blue---Medium)}
+#events .scroll-down-wrap{bottom:auto;top:-20px}
+#events-top{display:flex}
+#events-banner{position:absolute;top:0;left:0;z-index:0;height:100%;width:50%;opacity:64%}
+#events-in{position:relative;z-index:10}
+#events-in::before{content:'';position:absolute;top:-48px;left:-99px;z-index:-1;width:160px;height:160px;background:url(../images/events-bg-icon.png) center/cover no-repeat}
+#events-in .section-top{width:50%;margin-right:auto}
+#events-in .section-title{color:var(--Surfaces-white)}
+.section-btn-wrap{width:46.1%;margin-left:auto;margin-top:13px;position:relative}
+#events-box{min-height:480px;position:relative;margin-top:35px}
+#event-tabs-box-wrap{position:relative;z-index:1;width:46.1%;margin-left:auto;margin-top:6px}
+#event-tabs-box{display:inline-block}
+#event-filter{padding:17px 45px 17px 22px;font:700 16px 'HCo Gotham SSm', sans-serif;color:var(--Colors-Theme-Red);text-transform:uppercase;cursor:pointer;position:relative;background:var(--Colors-Theme-Blue---Lightest);border:2px solid var(--Colors-Theme-Secondary-300);min-width:194px}
+#event-filter::after{content:'';width:20px;height:20px;position:absolute;top:50%;transform:translateY(-50%);right:22px;transition:all .3s;background:url(../images/event-select-arrow.png) center/cover no-repeat}
+#event-tabs-wrap{position:relative}
+#event-tabs{margin:0;padding:0;list-style:none;position:absolute;left:0;top:calc(100% + 10px);width:100%;border:2px solid var(--Colors-Theme-Secondary-300);border-bottom:none;transition:all .4s ease-in-out;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-15px);}
+#event-filter.opened + #event-tabs-wrap #event-tabs{opacity:1;visibility:visible;pointer-events:all;transform:translateY(0)}
+#event-tabs:before{position:absolute;display:block;content:'';top:-5px;left:25px;z-index:-1;width:8px;height:8px;margin-bottom:-4px;border-top:2px solid var(--Colors-Theme-Secondary-300);border-left:2px solid var(--Colors-Theme-Secondary-300);background:var(--Colors-Theme-Blue---Lightest);transform:rotate(45deg)}
+#event-tabs li{margin:0}
+#event-tabs .event-tab{display:block;width:100%;padding:10px;background:var(--Colors-Theme-Blue---Lightest);font:700 14px 'HCo Gotham SSm', sans-serif;color:var(--Colors-Theme-Red);cursor:pointer;line-height:1.2;border-bottom:2px solid var(--Colors-Theme-Secondary-300)}
+#event-tabs .event-tab.current{display:none}
+.event-tab-content:not(.current){display:none}
+
+
+/* Section bottom-quick-links */
+#bottom-quick-links{position:relative;background:url(../images/ql-bg.jpg) left top/cover no-repeat;padding:94px 0 96px}
+#bottom-quick-links .container{width:1424px}
+#b-quick-links-in{padding:0 85px}
+#b-quick-links-in .section-top{display:block}
+#b-quick-links-in .section-title{font-size:40px;color:var(--Surfaces-white);text-align:center;margin:0 0 34px}
+#b-quick-links-in .quick-link{height:256px;padding:10px}
+#b-quick-links-in .quick-link::before{background:var(--Colors-Theme-Blue---Dark)}
+#b-quick-links-in .quick-link::after{background:var(--Colors-Theme-Secondary-700)}
+#b-quick-links-in .quick-link-text{font-size:20px;text-transform:uppercase}
+#b-quick-links-in .quick-link:hover .quick-link-bg-img{opacity:0.06}
+#b-quick-links-in .tns-controls{display:flex;justify-content:space-between;pointer-events:none;position:absolute;top:50%;transform:translateY(-50%);width:100%;transition:all .3s}
+#b-quick-links-in .tns-controls button{font-size:0;border:none;background:rgba(255, 255, 255, 0.80);position:relative;width:56px;height:67px;padding:0;pointer-events:all;transition:all .3s}
+#b-quick-links-in .tns-controls button:hover{background:rgba(255, 255, 255, 1)}
+#b-quick-links-in .tns-controls button img{width:30px}
+#b-quick-links-in .tns-controls button:first-of-type{margin-left:-96px}
+#b-quick-links-in .tns-controls button:last-of-type{margin-right:-96px}
+
+
+
+/* Section stay-informed */
+#stay-informed{background:var(--Colors-Theme-Red);position:relative;overflow:hidden}
+#stay-informed-bg-img{position:absolute;top:0;left:0;z-index:0;height:100%;width:100%;opacity:0.08}
+#stay-informed-in{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1;padding:60px 0 64px}
+#stay-informed-in::after{content:'';position:absolute;top:0;right:-104px;z-index:-1;width:401px;height:228px;background:url(../images/stay-informed-seal.png) center/contain no-repeat}
+.stay-informed-data{display:flex;align-items:center;padding-right:30px}
+.stay-informed-data img{width:100px;min-width:100px;margin-right:31px;margin-top:4px}
+.stay-informed-data .section-title{font-size:40px;color:var(--Surfaces-white);margin:0 0 10px;line-height:135%}
+.stay-informed-data p{font:400 20px 'HCo Gotham SSm', sans-serif;color:var(--Surfaces-white);margin:0}
+#stay-informed-in .section-btn{background:var(--Surfaces-white);color:var(--Colors-Theme-Red)!important}
+#stay-informed-in .section-btn:hover{background:var(--Colors-Theme-Secondary-100);color:var(--Colors-Theme-Secondary-700)!important}
+
+
+/* Footer */
+.site-footer{background:#fff;position:relative}
+#footer-bg-img{position:absolute;top:0;left:0;z-index:0;height:100%;width:100%;opacity:0.08}
+#footer-top{display:flex;padding:51px 0 35px;position:relative}
+.footer-top-box{font-size:14px;color:#1B1B1B}
+.footer-top-box:not(:last-child){padding-right:30px}
+.footer-top-box:nth-child(1){width:23.5%}
+.footer-top-box:nth-child(2){width:19.5%}
+.footer-top-box:nth-child(3){width:19.5%}
+.footer-top-box:nth-child(4){width:20%}
+.footer-top-box:nth-child(5){width:17.5%}
+
+
+.user-logged-in .footer-top-box{margin:5px}
+
+#footer-logo{display:inline-block;margin-top:2px}
+#footer-logo img{width:240px}
+.footer-social-btn{display:block;background:var(--Colors-Theme-Blue---Medium);padding:15px 108px 19px 15px;margin-top:24px;position:relative;text-decoration:none;width:240px;max-width:100%}
+.footer-social-btn::after{content:'';position:absolute;top:0;right:0;width:107px;height:100%;display:block;background:url(../images/footer-btn-img.png) left top/cover no-repeat}
+.footer-social-btn-plus{width:20px}
+.footer-social-btn-txt{font:700 14px 'HCo Gotham SSm', sans-serif;color:var(--Surfaces-white)!important;text-transform:uppercase;letter-spacing:-0.5px;line-height:150%}
+.footer-social-btn:hover{background:var(--Colors-Theme-Secondary-700);text-decoration:none}
+
+.footer-top-header{font:700 16px 'HCo Gotham SSm', sans-serif;color:var(--Colors-Theme-Blue---Medium);text-transform:capitalize;margin:0 0 16px}
+.footer-list{margin:0;padding:0;list-style:none}
+.footer-list li{margin-bottom:16px;line-height:1.21}
+.footer-list-link{display:inline-block;font:400 14px 'HCo Gotham SSm', sans-serif;color:var(--brandcolor);text-decoration:none}
+.footer-list-link:hover{color:var(--Colors-Theme-Secondary-700);text-decoration:none}
+
+
+
+
+
+
+#footer-bottom{position:relative;padding:24px 0 28px;text-align:center;font:400 14px 'HCo Gotham SSm', sans-serif;color:var(--brandcolor);border-top:1px solid var(--Colors-Grayscale-300)}
+#revize-link,#revize-login,.privacy-policy{display:inline-block;color:var(--brandcolor);text-decoration:none}
+#revize-link{display:inline-flex}
+#revize-link img{width:40px;min-width:40px}
+#revize-link:hover,#revize-login:hover,.privacy-policy:hover{color:var(--brandcolor);text-decoration:none}
+#footer-bottom .footer-spacer::after{content:'';display:inline-block;width:1px;height:12px;position:relative;background:var(--brandcolor);margin:0 10px;top:1px}
+
+
+/* -----------------------------------------
+
+#inner
+
+-----------------------------------------*/
+#freeform-wrap{position:relative;padding:48px 0 24px}
+#freeform-in{display:flex;justify-content:space-between}
+#freeform-left{width:288px}
+#freeform-right{width:calc(100% - 288px)}
+#flyout-wrap{margin-bottom:8px;background:var(--Colors-Theme-Blue---Lightest)}
+#entry{width:100%;padding:2px 0 20px 24px}
+#flyout-header{font:400 20px 'HCo Gotham SSm', sans-serif;color:var(--brandcolor);text-transform:uppercase;padding:31px 31px 12px;margin-bottom:0;line-height:135%;letter-spacing:1.5px}
+#flyout{padding:0 0 29px;margin:0 0 16px}
+#flyout li{position:relative;margin:0;list-style:none}
+#flyout a,
+#flyout span{display:block;text-decoration:none;font-size:14px;color:var(--brandcolor);padding:14px 31px;line-height:1.21}
+#flyout ul{padding:0;margin:0}
+#flyout ul a,
+#flyout ul span{font-size:14px;padding:10px 15px}
+.aside-box{background:var(--Colors-Theme-Blue---Lightest);margin-bottom:16px;padding:31px}
+.aside-box-header{font:400 20px 'HCo Gotham SSm', sans-serif;color:var(--brandcolor);text-transform:uppercase;margin-bottom:17px;line-height:135%;letter-spacing:1.5px}
+.freeform-contact-us{padding-bottom:16px;margin-bottom:16px}
+.freeform-contact-img-box img{display:inline-block;width:224px;height:164px;object-fit:cover}
+.freeform-contact-name{font-weight:700;color:var(--brandcolor);margin:18px 0 0;line-height:1.2}
+.freeform-contact-title{font-size:14px;color:var(--darkgray);margin:4px 0 30px;line-height:1.2}
+.freeform-contact-box{display:flex;align-items:center;font-size:14px;line-height:1.2;margin-bottom:16px}
+.freeform-contact-box address{margin:0}
+.freeform-contact-box img{width:24px;min-width:24px}
+.freeform-contact-box a,.freeform-contact-box span{display:inline-block;color:var(--brandcolor);text-decoration:none;margin:0 0 0 16px;line-height:1.5}
+.freeform-contact-box a:hover{color:#000;text-decoration:none}
+.freeform-contact-email{word-break:break-all}
+.freeform-contact-text{line-height:1.5}
+.freeform-location-hours{padding-bottom:17px;margin-bottom:16px}
+.freeform-location-hours .aside-box-header{margin-bottom:16px}
+.aside-hours{display:flex;align-items:flex-start;font-size:14px;margin-bottom:16px}
+.aside-hours span{color:var(--brandcolor);line-height:150%}
+.aside-hours strong{width:72px;font-weight:700;text-transform:uppercase;color:var(--Typography-secondary);line-height:150%}
+.flyout-download{padding-bottom:31px}
+.download-box-wrap{display:flex;align-items:center;line-height:1.5;background:var(--lightgray);padding:12px 13px;text-decoration:none}
+.download-box-wrap:hover{text-decoration:none}
+.download-box-wrap:not(:last-child){margin-bottom:15px}
+.download-box{font-weight:700;font-size:14px;color:var(--brandcolor);margin-top:1px;line-height:150%;letter-spacing:-1px}
+.files-icon{width:24px;min-width:24px;margin-right:16px}
+#breadcrumbs ul{margin:0 0 33px;padding:0;list-style:none;font-size:16px;color:var(--Typography-secondary);text-transform:capitalize;line-height:1}
+#breadcrumbs ul li{display:inline-block;margin:0;position:relative}
+#breadcrumbs ul li:not(:last-of-type){margin-right:29px}
+#breadcrumbs ul li:not(:last-of-type)::after{content:'';background:url(../images/breadcrumbs-arrow.png) center/cover no-repeat;width:14px;height:14px;position:absolute;top:3px;right:-23px}
+#breadcrumbs a{display:inline-block;font-weight:700;color:var(--Colors-Theme-Blue---Medium);position:relative;text-decoration:none}
+#post blockquote{font-weight:700;font-size:20px;color:var(--brandcolor);background:var(--Colors-Theme-Light-Beige);padding:48px 140px 48px 46px;line-height:150%;text-transform:capitalize;position:relative;margin:30px 0}
+#post blockquote::after{content:'';width:78px;height:78px;position:absolute;top:50%;transform:translateY(-50%);right:48px;
+	background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="78" height="78" viewBox="0 0 78 78" fill="none"><g clip-path="url(%23clip0_2014_7709)"><path d="M19.5 55.25H29.25L35.75 42.25V22.75H16.25V42.25H26L19.5 55.25ZM45.5 55.25H55.25L61.75 42.25V22.75H42.25V42.25H52L45.5 55.25Z" fill="%23333333"/></g><defs><clipPath id="clip0_2014_7709"><rect width="78" height="78" fill="white"/></clipPath></defs></svg>')
+}
+
+
+
+
+
+
+
+.freeform-accordion{position:relative;margin:25px 0 20px}
+.freeform-accordion .subheader{margin-bottom:6px}
+.freeform-accordion-in{margin-top:6px}
+.accordion-box:not(:last-of-type){border-bottom:2px solid var(--Colors-Grayscale-200)}
+.accordion-top{position:relative}
+
+.accordion-header{display:block;width:100%;font-weight:700;font-size:18px;color:var(--Colors-Theme-Blue---Medium);cursor:pointer;padding:31px 80px 31px 11px;margin:0;line-height:150%}
+
+.accordion-signs-wrap{display:flex;justify-content:center;align-items:center;position:absolute;right:20px;top:50%;transform:translateY(-50%) rotate(45deg);width:40px;height:40px;background:var(--Colors-Theme-Dark-Beige);cursor:pointer;transition:all .3s}
+.accordion-signs{width:26px;height:26px;transform:rotate(-45deg)}
+.accordion-plus, .accordion-minus{position:absolute;transition:all .3s}
+
+
+
+.accordion-minus{opacity:0}
+.accordion-top.active .accordion-plus{opacity:0}
+.accordion-top.active .accordion-minus{opacity:1}
+.accordion-top.active .accordion-signs-wrap{background:var(--Colors-Theme-Light-Beige)}
+
+
+.accordion-content{display:none;font-weight:500;font-size:14px;padding:7px 0 0 11px;line-height:150%}
+.accordion-content-header{font-size:20px;color:var(--brandcolor);text-transform:uppercase;letter-spacing:2px;margin-bottom:11px}
+.accordion-content p{font-size:16px;margin-bottom:24px;line-height:150%}
+
+.accordion-content-title{font-weight:500;font-size:22px;color:#202d3d;margin-bottom:10px;line-height:1.2}
+.accordion-content-text{font-weight:500;font-size:15px;color:#1d2326;line-height:1.8}
+
+
+
+
+
+.fullwidth #entry{padding:20px 0}
+.col-xs-12{width:100%}
+
+/* -----------------------------------------
+
+#share widget
+
+-----------------------------------------*/
+.modal{z-index:100000}
+
+/** modal **/
+.modal .modal-dialog{transition:transform cubic-bezier(0.86,0,0.07,1);transform:scale(.98)!important;opacity:1!important}
+.modal.show .modal-dialog{transition:transform .3s cubic-bezier(0.86,0,0.07,1);transform:translateY(0%)!important;}
+
+.modal-content{border-radius:10px;overflow:hidden;border:0}
+.modal-header{background:#d2d2d2;border-radius:10px 10px 0 0;font-size:18px;line-height:1.4}
+.share-btns{display:flex;gap:8px;justify-content:center}
+.share-btns a{display:flex;text-decoration:none;border-radius:100%;height:44px;width:44px;outline-offset:0;outline:2px solid transparent;transition:all .3s}
+.share-btns svg{width:16px;height:16px;margin:auto;fill:#fff}
+.btn-linkedin{background:#0077b5}
+.btn-linkedin:hover{border-color:#0077b5;outline:2px solid #0077b5;outline-offset:2px}
+.btn-facebook{background:#3b5998}
+.btn-facebook:hover{border-color:#3b5998;outline:2px solid #3b5998;outline-offset:2px}
+.btn-twitter{background:#000}
+.btn-twitter:hover{border-color:#000;outline:2px solid #000;outline-offset:2px}
+.btn-reddit{background:#ff5700}
+.btn-reddit:hover{border-color:#ff5700;outline:2px solid #ff5700;outline-offset:2px}
+.modal .btn{font-size:16px!important;font-weight:700!important;padding:.6rem 1.2rem!important;border:0!important;line-height:1.4!important;text-transform:none!important;letter-spacing:0!important;color:#000!important;border:0!important}
+.modal .btn.p-0{padding:0!important}
+.modal .btn-inverse:focus{box-shadow:0 0 0 .2rem rgba(0,0,0,.25)}
+.floating-share-btn{position:fixed;z-index:99999;top:calc(50% - 32px);right:0;border-radius:0;border:0;background:#fff;width:64px;height:64px;box-shadow:0 4px 24px rgba(0,0,0,0.15),0 2px 6px rgba(0,0,0,0.05);text-align:center;border-radius:6px 0 0 6px}
+ 
+/* -----------------------------------------
+
+#slider
+
+-----------------------------------------*/
+#slider{height:740px;position:relative;overflow:hidden;margin-top:100px}
+#hero-video-box{position:absolute;left:0;top:0;height:100%;width:100%}
+#hero-slider-box{position:absolute;left:0;top:0;height:100%;width:100%}
+#hero-slider-box > .tns-outer,
+#hero-slider-box > .tns-outer > .tns-inner,
+#hero-slider-box > .tns-outer > .tns-inner > .tiny-slider,
+#hero-slider-box > .tns-outer > .tns-inner > .tiny-slider .tns-item,
+.tns-bg-slide {height:100%}
+.tns-outer{position:relative}
+.tns-controls{position:absolute;top:50%;left:0;right:0;z-index:1;transform:translateY(-50%)}
+.tns-controls button:last-of-type {float:right}
+.tns-nav{position:absolute;bottom:0;left:0;right:0;z-index:1;text-align:center}
+#hero-slider-box button[data-action]{position:absolute;bottom:0;right:0;z-index:1}
+ul.tiny-slider,
+ul.tiny-carousel{padding:0;margin:0}
+#slider .tns-nav{display:none}
+#slider button[data-action]{display:none}
+#slider-btns{position:absolute;top:50%;transform:translateY(-50%);display:flex;justify-content:space-between;width:100%;z-index:50;pointer-events:none}
+#slider-prev,#slider-next{background:none;border:none;padding:0;width:30px;height:31px;transition:all .3s;pointer-events:all}
+#slider-prev{transform:translateX(-100px)}
+#slider-next{transform:translateX(100px)}
+#slider:hover #slider-prev{transform:translateX(15px)}
+#slider:hover #slider-next{transform:translateX(-15px)}
+
+#homepage #slider .tiny-item>div::after{content: '';position:absolute;bottom:0;z-index:1;height:100%;width:100%;background:linear-gradient(180deg, rgba(15, 51, 86, 0.24) 35%, rgba(15, 51, 86, 0.64) 100%)}
+
+
+
+
+
+
+/* Section search */
+#slider-caption-search-wrap{position:absolute;left:0;right:0;top:47%;transform:translateY(-50%);z-index:7;text-align:center;padding:0 50px}
+#slider-caption{font:700 72px 'HCo Gotham SSm', sans-serif;color:var(--Surfaces-white);text-transform:uppercase;letter-spacing:5px}
+#slider-caption span{display:inline-block;font:italic 400 72px 'Times New Roman', serif;text-transform:none}
+#slider-search{margin-top:34px}
+#slider-search form{position:relative;display:inline-block;margin-bottom:0}
+#slider-search input{width:600px;height:72px;padding:0 80px 0 20px;font:400 18px 'HCo Gotham SSm',sans-serif;color:var(--Typography-black);background:var(--Surfaces-white);border:none}
+#slider-search button{display:inline-flex;align-items:center;justify-content:center;position:absolute;top:0;right:0;height:72px;width:72px;background:transparent;border:none;cursor:pointer;margin:0;padding:0}
+#slider-search button img{width:32px}
+#slider-search input::-webkit-input-placeholder{color:var(--darkgray)}
+#slider-search input:-moz-placeholder{color:var(--darkgray)}
+#slider-search input::-moz-placeholder{color:var(--darkgray)}
+#slider-search input:-ms-input-placeholder{color:var(--darkgray)}
+
+
+
+/* Scroll */
+.scroll-down-wrap{display:flex;justify-content:center;position:absolute;left:0;bottom:170px;z-index:10;width:100%}
+.scroll-down-box{animation:bounce 3s infinite}
+.scroll-down{display:inline-flex;justify-content:center;align-items:center;width:40px;height:40px;cursor:pointer;background:var(--Colors-Theme-Dark-Beige);transform:rotate(45deg)}
+.scroll-down:hover{background:var(--Colors-Theme-Red)}
+.scroll-down img{width:26.25px;height:26.25px;transform:rotate(-45deg)}
+.scroll-down:hover img{filter:brightness(0) invert(1)}
+
+@keyframes bounce {
+    0%, 20%, 55%, 80%, 100%{transform:translateY(0)}
+    40%, 45%{transform:translateY(-15px)}
+    70%{transform:translateY(-7px)}
+    90%{transform:translateY(-2px)}
+}
+
+
+
+#freeform #slider{height:400px}
+
+#freeform #slider .tiny-item>div::after{content: '';position:absolute;bottom:0;z-index:1;height:100%;width:100%;background:linear-gradient(180deg, rgba(15, 51, 86, 0.40) 35%, rgba(15, 51, 86, 0.72) 100%)}
+#freeform #slider-btns{bottom:15px;top:auto;transform:none}
+#freeform #slider-btns img{filter:brightness(0) invert(1)}
+
+#page-title{position:absolute;left:0;right:0;top:49.3%;transform:translateY(-50%);z-index:1;font:700 64px 'HCo Gotham SSm',sans-serif;color:var(--Surfaces-white);text-align:center;text-transform:uppercase;letter-spacing:6px;line-height:130%}
+
+
+/* to be deleted */
+#hero-video-box{display:none}
+/* #homepage #hero-slider-box{display:none} */
+
+/* -----------------------------------------
+
+#media queries
+
+-----------------------------------------*/
+@media only screen and (min-width:992px) {
+	.layout-table{table-layout:fixed;width:100%}
+	#nav .focused .toggle2{display:none}
+	#nav .focused .toggle{display:inline-block;margin:0 0 0 -18px;padding:0!important;height:auto!important}
+	#nav .toggle{height:auto}
+	#nav .focused .toggle2{-webkit-transform:rotate(-90deg);transform:rotate(-90deg)}
+	#nav{display:flex!important;width:100%;justify-content:center}
+	#nav li{display:inline-flex;align-items:center;height:100%;transition:all 320ms}
+	#nav li:hover>ul{display:block}
+	#nav ul ul{display:block!important;left:100%;top:0;margin:-12px 0 8px;background:transparent}
+	#nav ul.first-level{border-top:2px solid var(--Colors-Theme-Blue---Medium);box-shadow:0px 6px 8px 0px rgba(15, 51, 86, 0.16)}
+	.nav-in{position:absolute;top:0;left:0;right:0;padding:48px 59px 34px 43px;column-count:4;column-gap:30px;background-color:var(--Surfaces-white);box-shadow:0px 6px 8px 0px rgba(15, 51, 86, 0.16)}
+	#nav>li:hover>a:first-child,#nav>li:hover>span{color:var(--Colors-Theme-Secondary-700)}
+	#nav ul :is(a:hover, span:hover), #nav ul ul :is(a:hover, span:hover){color:var(--Colors-Theme-Secondary-700)}
+
+
+	#flyout .toggle{display:none;position:absolute;top:14px;right:0;border:none}
+	#flyout .focused .toggle{display:inline-block;transform:rotate(-90deg) translateY(-50%)}
+	#flyout{display:block!important}
+	#flyout ul{position:absolute;left:100%;top:0;width:200px;display:none;background:var(--Colors-Theme-Blue---Lightest)}
+	#flyout li:hover ul{display:block}
+	#flyout li{transition:all 320ms}
+	#flyout ul li:last-child a:first-child:after,#flyout ul li:last-child span:after{content:none}
+
+
+	.site-header nav{display:flex!important}
+}
+
+@media only screen and (max-width:1600px) {
+	#nav ul{left:0;right:0}
+}
+
+@media only screen and (max-width:1400px) {
+	#header-in{padding:0 15px}
+	#header-right-box{margin-left:0}
+	#logo-wrap{width:90px;margin-top:5px!important}
+	#logo img{width:90px!important}
+	#nav a, #nav span{padding-left:18px;padding-right:18px}
+	#top-links-in{padding:0 70px 4px}
+}
+
+@media only screen and (max-width:991px) {
+	/* rz form tables - without page scope this targets editforms and makes
+	 * editing confusing
+	*/
+	#freeform #formwizziwmorf tr,#freeform #formwizziwmorf tr td{display:block!important}
+	#freeform #formwizziwmorf tr table tr{display:table-row!important}
+	#freeform #formwizziwmorf tr table td{display:table-cell!important}
+	/* Allows tables to be used as columns with responsive stacking */
+	.layout-table{width:100%!important}
+	.layout-table,
+	.layout-table thead,
+	.layout-table tbody,
+	.layout-table th,
+	.layout-table td,
+	.layout-table tr{display:block!important}
+	.layout-table td{margin-bottom:15px}
+	#toggles{position:absolute;right:15px;top:22px;z-index:100}
+	#nav-toggle{line-height:56px;width:56px;text-align:center;border-radius:50%;font-size:21px;color:#fff;cursor:pointer;background:var(--Colors-Theme-Secondary-100---Sky)}
+	#flyout{display:none}
+	#nav li{display:block}
+	#nav a,
+	#nav span,
+	#flyout a,
+	#flyout span{font-size:16px!important;line-height:1 !important;padding:15px !important;border-bottom:1px solid rgba(0,0,0,.15)}
+	#flyout a,
+	#flyout span{font-size:14px!important}
+	#nav li:last-child>a,
+	#nav li:last-child>span,
+	#flyout li:last-child>a,
+	#flyout li:last-child>span{border:0}
+	#flyout ul{background:rgba(0,0,0,.1)}
+	.toggle,.toggle2{display:block;position:absolute;right:0;top:0;line-height:45px;text-align:center;width:45px;background:rgba(0,0,0,.15);transform:none!important}
+	#nav .toggle,#nav .toggle2,#flyout .toggle{display:block;position:absolute;right:15px;top:0;line-height:45px;text-align:center;width:45px;color:#112034;padding:15px!important}
+	#flyout .toggle{right:0}
+	#nav a,#nav span{padding:15px 70px 15px 15px!important}
+	#nav ul ul a, #nav ul ul span{padding:15px!important}
+	#flyout a{padding:15px 60px 15px 15px!important}
+	#flyout ul a{padding:15px!important;text-transform:none}
+	.site-header{position:relative}
+	.site-header .container{padding:0}
+
+	#header-in{padding-right:70px;padding-left:10px}
+	.site-header nav{display:none;position:absolute!important;left:0;top:100px;z-index:200;width:100%;height:auto;margin:0}
+	#nav{display:block;padding:0;margin:0;background:#fff;height:auto;box-shadow:0px 0px 20px 0px rgba(0, 0, 0, 0.1)}
+	#nav li{position:relative;margin:0}
+	#nav a,#nav span{display:block;height:auto!important;text-align:left;margin-bottom:0!important}
+	#nav ul{display:none;position:static;padding:0;margin:0;background:rgba(0,0,0,.1)}
+	#nav ul a, #nav ul span{display:block}
+	#nav ul ul a, #nav ul ul span{font-size:14px!important}
+
+	#header-search-toggle{width:56px;height:56px}
+	#header-right-box{margin-right:15px}
+	#translate-button .translate-flag{width:56px;min-width:56px;height:56px}
+	#translation-links{margin-right:15px}
+	#translation-links ul{top:78px}
+	#header-search #search{top:78px}
+	
+
+
+
+	#slider{margin-top:0}
+	#slider-btns{display:none}
+
+	#slider-caption-search-wrap{top:40%;padding-left:15px;padding-right:15px}
+
+	#quick-links-in{padding:0 50px}
+	#quick-links .tns-controls button:first-of-type{margin-left:-60px}
+	#quick-links .tns-controls button:last-of-type{margin-right:-60px}
+
+	#news{padding-bottom:60px}
+	#news::before{content:none}
+	#news-in{flex-wrap:wrap;margin-top:30px}
+	#news-in::before{content:none}
+	#news .section-top{margin-top:50px}
+	#news-left{width:100%;margin-bottom:40px}
+	#news-right{width:100%}
+	.featured-news{height:60vw}
+	.featured-news-info{padding:15px}
+
+
+	#events{padding:60px 0}
+	#events-in .section-title{color:var(--brandcolor)}
+	#events-banner{display:none}
+	#events-in .section-top{width:auto;margin-right:0}
+	#events-top{flex-wrap:wrap;justify-content:space-between}
+	#events::before{content:none}
+	#events-in::before{content:none}
+	#event-tabs-box-wrap{width:auto;margin-left:0}
+	.section-btn-wrap{width:100%;margin-left:0;margin-top:30px}
+	
+	#bottom-quick-links{padding:50px 0}
+	#b-quick-links-in{padding:0 50px}
+	#b-quick-links-in .tns-controls button:first-of-type{margin-left:-60px}
+	#b-quick-links-in .tns-controls button:last-of-type{margin-right:-60px}
+
+
+
+
+	#stay-informed-in{flex-wrap:wrap;padding:30px 0}
+	#stay-informed-in::after{content:none}
+	.stay-informed-data{width:100%;padding:0;margin-bottom:30px}
+	.stay-informed-data img{margin:0 5px 0 -10px;width:70px;min-width:70px}
+
+
+	#footer-top{flex-wrap:wrap}
+	.footer-top-box:nth-child(1){width:100%!important;text-align:center;margin-bottom:30px}
+	#footer-top .footer-top-box{width:25%}
+	.footer-social-btn{margin:24px auto}
+
+
+
+
+
+
+	#freeform #slider{height:300px!important;padding:0}
+	#freeform #slider .tns-controls{top:auto;bottom:0;transform:unset;opacity:1}
+
+
+	#freeform-wrap{padding-top:15px}
+	#freeform-in{flex-wrap:wrap}
+	#freeform-left{width:100%;order:2}
+	#freeform-right{width:100%;order:1}
+	#flyout-wrap{padding:0;margin:0 0 16px}
+	#flyout-toggle{display:block;margin:0;padding:15px 16px;font:400 20px 'HCo Gotham SSm', sans-serif;color:var(--brandcolor);text-transform:uppercase;letter-spacing:1.5px;cursor:pointer}
+	#flyout{padding:0;margin:0}
+	#flyout-header{display:none}
+	#flyout ul{display:none}
+	#entry{padding:30px 0 20px}
+	.aside-box{border-radius:unset}
+	.flyout-download{margin-top:10px}
+
+}
+
+@media only screen and (max-width:767px) {
+	.floating-alert{width:auto;right:10px;left:10px}
+	.floating-alert{font-size:12px}
+	.floating-alert h4{margin-bottom:10px;font-size:14px}
+	.floating-alert .btn{font-size:10px}
+	.share-btns a{height:auto;padding:10px;width:100%;font-size:12px;white-space:nowrap;overflow:hidden}
+	.share-btns i{display:block;line-height:50px!important;font-size:20px}
+
+	#top-links .tns-horizontal.tns-subpixel>.tns-item{vertical-align:middle}
+	.top-link{padding:19px 0}
+	#top-links-in{padding:0 60px}
+	#top-links .tns-controls{top:50%}
+	.top-link::after{content:none}
+
+	#slider-search form{display:block}
+	#slider-search input{width:100%}
+	#slider-caption{font-size:10vw}
+	#slider-caption span{font-size:10vw}
+	#footer-top{justify-content:space-between}
+	#footer-top .footer-top-box{width:47%;padding-right:0}
+	#footer-top .footer-top-box:not(:last-of-type){margin-bottom:30px}
+	#footer-bottom{padding-left:50px;padding-right:50px;line-height:1.5}
+
+	#post blockquote{padding:20px 75px 20px 20px}
+	#post blockquote::after{right:0}
+	#freeform #slider #page-title{font-size:10vw}
+
+}
+
+@media only screen and (max-width:479px) {
+	#header-search #search{right:-55px}
+	#translation-links ul{right:-149px;width:206px}
+	#translate-reset{display:none!important} 
+	.featured-news{height:100vw}
+	.featured-news-title{font-size:16px;line-height:120%}
+	#news-left .tns-controls button:first-of-type{margin-left:5px}
+	#news-left .tns-controls button:last-of-type{margin-right:5px}
+	.h-news{flex-wrap:wrap;height:auto;overflow:unset}
+	.h-news-banner{height:50vw;width:100%}
+	.h-news-info{width:100%;padding:15px}
+	.h-news-title{font-size:16px;line-height:120%}
+	.section-title{font-size:36px!important;line-height:120%}
+	.section-btn{font-size:14px;padding:15px}
+
+	#b-quick-links-in .quick-link-text{font-size:16px}
+
+	#footer-top .footer-top-box{width:100%;text-align:center}
+	#post blockquote{font-size:16px}
+}
+
+@media print {
+	#freeform-left,.uai,#slider,footer,#breadcrumbs,#flyout-wrap,.floating-share-btn,.e-notify,header{display:none!important}
+	a[href]:after{content:none!important}
+	#freeform-wrap{padding:0}
+	#freeform-right{width:100%}
+	#entry{padding:0!important}
+}

@@ -1,0 +1,59 @@
+<div id="event-tabs-content">
+	<div class="event-tab-content current">
+		<div class="calendar-wrap">
+			<div class="mini-calendar" data-calendar="1" style="display:none"></div>
+			<div class="mini-events-list" data-list-length="5" data-calendar="1" style="display:none">
+				{{?it.length}}
+					{{~it :event:index}}
+					<div class="event" data-index="{{=event.i}}" data-click-event tabindex="0" role="button">
+						<div class="event-in-wrap">
+							<div class="event-in">
+								<div class="event-date">{{=event.start.month.long}} {{=event.start.day.num}}, {{=event.start.year.long}}</div>
+								<div class="event-title">{{=event.title}}</div>
+							</div>
+						</div>
+					</div>
+					{{~}}
+				{{?}}
+			</div>
+		</div>
+	</div><!--/.event-tab-content-->
+	<div class="event-tab-content">
+		<div class="calendar-wrap">
+			<div class="mini-calendar" data-calendar="2" style="display:none"></div>
+			<div class="mini-events-list" data-list-length="5" data-calendar="2" style="display:none">
+				{{?it.length}}
+					{{~it :event:index}}
+					<div class="event" data-index="{{=event.i}}" data-click-event tabindex="0" role="button">
+						<div class="event-in-wrap">
+							<div class="event-in">
+								<div class="event-date">{{=event.start.month.long}} {{=event.start.day.num}}, {{=event.start.year.long}}</div>
+								<div class="event-title">{{=event.title}}</div>
+							</div>
+						</div>
+					</div>
+					{{~}}
+				{{?}}
+			</div>
+		</div>
+	</div><!--/.event-tab-content-->
+	<div class="event-tab-content">
+		<div class="calendar-wrap">
+			<div class="mini-calendar" data-calendar="3" style="display:none"></div>
+			<div class="mini-events-list" data-list-length="5" data-calendar="3" style="display:none">
+				{{?it.length}}
+					{{~it :event:index}}
+					<div class="event" data-index="{{=event.i}}" data-click-event tabindex="0" role="button">
+						<div class="event-in-wrap">
+							<div class="event-in">
+								<div class="event-date">{{=event.start.month.long}} {{=event.start.day.num}}, {{=event.start.year.long}}</div>
+								<div class="event-title">{{=event.title}}</div>
+							</div>
+						</div>
+					</div>
+					{{~}}
+				{{?}}
+			</div>
+		</div>
+	</div><!--/.event-tab-content-->
+</div><!-- /#event-tabs-content -->
